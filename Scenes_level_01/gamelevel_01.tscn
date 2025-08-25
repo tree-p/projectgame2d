@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf50qmntcpj5q"]
+
+[ext_resource type="Script" uid="uid://beqjrviacmvtt" path="res://game.gd" id="1_bempu"]
+[ext_resource type="PackedScene" uid="uid://c7ai4bigaryci" path="res://gui/pause_menu_singleplayer.tscn" id="2_jf5ah"]
+
+[node name="Gamelevel_01" type="Node"]
+script = ExtResource("1_bempu")
+metadata/_custom_type_script = "uid://beqjrviacmvtt"
+
+[node name="InterfaceLayer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="PauseMenu" parent="InterfaceLayer" instance=ExtResource("2_jf5ah")]
+metadata/_edit_use_anchors_ = true

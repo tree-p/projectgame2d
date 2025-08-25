@@ -84,6 +84,7 @@ render_target_update_mode = 4
 layer = 100
 
 [node name="PauseMenu" parent="InterfaceLayer" instance=ExtResource("2_xkexm")]
+metadata/_edit_use_anchors_ = true
 
 [connection signal="coin_collected" from="Black/SplitContainer/ViewportContainer1/Viewport1/Player1" to="InterfaceLayer/PauseMenu" method="_on_coin_collected"]
 [connection signal="coin_collected" from="Black/SplitContainer/ViewportContainer1/Viewport1/Player2" to="InterfaceLayer/PauseMenu" method="_on_coin_collected"]
