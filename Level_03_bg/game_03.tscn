@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://cc8wwcg6my5ri"]
+
+[ext_resource type="Script" uid="uid://beqjrviacmvtt" path="res://game.gd" id="1_g0u2n"]
+[ext_resource type="PackedScene" uid="uid://ctgumjaytuoch" path="res://level/level.tscn" id="2_bha6g"]
+[ext_resource type="PackedScene" uid="uid://vh7pmputa7r3" path="res://player/player.tscn" id="3_c6lyd"]
+[ext_resource type="PackedScene" uid="uid://c7ai4bigaryci" path="res://gui/pause_menu_singleplayer.tscn" id="4_ucvwj"]
+[ext_resource type="PackedScene" uid="uid://cx8qvtmkhklay" path="res://Level_03_bg/parallax_background_03.tscn" id="5_bha6g"]
+
+[node name="Game" type="Node"]
+process_mode = 3
+script = ExtResource("1_g0u2n")
+
+[node name="Level" parent="." instance=ExtResource("2_bha6g")]
+visible = false
+
+[node name="Player" parent="Level" instance=ExtResource("3_c6lyd")]
+visible = false
+position = Vector2(90, 546)
+
+[node name="InterfaceLayer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="PauseMenu" parent="InterfaceLayer" instance=ExtResource("4_ucvwj")]
+
+[node name="Level_03" parent="." instance=ExtResource("5_bha6g")]
+
+[node name="Player" parent="Level_03" instance=ExtResource("3_c6lyd")]
+position = Vector2(90, 546)
+
+[connection signal="coin_collected" from="Level/Player" to="InterfaceLayer/PauseMenu" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Level_03/Player" to="InterfaceLayer/PauseMenu" method="_on_coin_collected"]
