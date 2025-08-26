@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3pbbytesa6vm"]
+
+[ext_resource type="Script" uid="uid://beqjrviacmvtt" path="res://game.gd" id="1_xqvk7"]
+[ext_resource type="PackedScene" uid="uid://c0addaheoguc6" path="res://level/level_02.tscn" id="2_4ysfd"]
+[ext_resource type="PackedScene" uid="uid://vh7pmputa7r3" path="res://player/player.tscn" id="3_dw4l3"]
+[ext_resource type="PackedScene" uid="uid://c7ai4bigaryci" path="res://gui/pause_menu_singleplayer.tscn" id="4_f0anl"]
+
+[node name="Game_02" type="Node"]
+process_mode = 3
+script = ExtResource("1_xqvk7")
+
+; ใช้ Level_02.tscn แทน level.tscn เดิม
+[node name="Level" parent="." instance=ExtResource("2_4ysfd")]
+
+[node name="Player" parent="Level" instance=ExtResource("3_dw4l3")]
+position = Vector2(90, 546)
+
+[node name="InterfaceLayer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="PauseMenu" parent="InterfaceLayer" instance=ExtResource("4_f0anl")]
+
+[connection signal="coin_collected" from="Level/Player" to="InterfaceLayer/PauseMenu" method="_on_coin_collected"]
