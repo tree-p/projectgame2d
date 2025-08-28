@@ -12,7 +12,7 @@ script = ExtResource("1_pyfpw")
 [node name="Level_02" parent="." instance=ExtResource("2_eljyb")]
 
 [node name="Player" parent="Level_02" instance=ExtResource("3_oruhb")]
-position = Vector2(90, 546)
+position = Vector2(90, 545)
 
 [node name="InterfaceLayer" type="CanvasLayer" parent="."]
 layer = 100

@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://c0addaheoguc6"]
+[gd_scene load_steps=50 format=3 uid="uid://c0addaheoguc6"]
 
 [ext_resource type="TileSet" uid="uid://vpom7e6j0rup" path="res://level/tile_set_02.tres" id="1_bb7gw"]
 [ext_resource type="Material" uid="uid://djwm5nol3d801" path="res://level/props/wind_sway.tres" id="2_lge02"]
@@ -26,6 +26,8 @@
 [ext_resource type="Texture2D" uid="uid://cqydct6vajobg" path="res://level/props/bush_1.webp" id="18_7sa68"]
 [ext_resource type="Texture2D" uid="uid://co8bwstg3ea6x" path="res://level/props/rock_1.webp" id="19_yst4x"]
 [ext_resource type="PackedScene" uid="uid://c0gn1fugjimou" path="res://Level_and_Game_02_dontuse002/platform_level_02.tscn" id="22_h2tl3"]
+[ext_resource type="PackedScene" uid="uid://c4nks7p04guw3" path="res://Level_and_Game_02_dontuse002/enemy_02_1.tscn" id="22_u8feq"]
+[ext_resource type="PackedScene" uid="uid://cip08d5muh1wi" path="res://Level_and_Game_02_dontuse002/enemy_02_2.tscn" id="23_4xl5e"]
 [ext_resource type="Texture2D" uid="uid://be5xmnqx2pbay" path="res://bg/3 Objects/Trees/1.png" id="25_tg0cf"]
 [ext_resource type="Texture2D" uid="uid://67pq18un54tw" path="res://bg/3 Objects/Trees/16.png" id="26_5ag75"]
 [ext_resource type="Texture2D" uid="uid://cvf156cfiv8wi" path="res://bg/3 Objects/Trees/14.png" id="27_csy4g"]
@@ -40,6 +42,22 @@
 [ext_resource type="Texture2D" uid="uid://c4aoyjodx8ytn" path="res://bg/5 Objects/Boxes/1.png" id="38_yo4i0"]
 [ext_resource type="Texture2D" uid="uid://dj1wwt56t1oa4" path="res://bg/5 Objects/Boxes/3.png" id="39_qxdk4"]
 [ext_resource type="Texture2D" uid="uid://cp8vqis61ucu4" path="res://bg/5 Objects/Stones/4.png" id="42_tg0cf"]
+
+[sub_resource type="Animation" id="Animation_h2tl3"]
+length = 0.001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-96, 601)]
+}
 
 [sub_resource type="Animation" id="Animation_4xl5e"]
 resource_name = "new_animation"
@@ -56,22 +74,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(-96, 601), Vector2(-94, 446), Vector2(-96, 246), Vector2(-96, 601)]
-}
-
-[sub_resource type="Animation" id="Animation_h2tl3"]
-length = 0.001
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-96, 601)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f7s3u"]
@@ -1551,16 +1553,24 @@ autoplay = "move"
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Enemy2" parent="Enemies" instance=ExtResource("14_l57od")]
+visible = false
 z_index = 2
 position = Vector2(544, 355)
 
 [node name="Enemy3" parent="Enemies" instance=ExtResource("14_l57od")]
+visible = false
 z_index = 2
 position = Vector2(492, 610)
 
 [node name="Enemy4" parent="Enemies" instance=ExtResource("14_l57od")]
 z_index = 2
 position = Vector2(395, 53)
+
+[node name="Enemy02_1" parent="Enemies" instance=ExtResource("22_u8feq")]
+position = Vector2(83, 350)
+
+[node name="Enemy02_2" parent="Enemies" instance=ExtResource("23_4xl5e")]
+position = Vector2(495, 147)
 
 [node name="ParallaxBackground_02" parent="." instance=ExtResource("16_lge02")]
 
