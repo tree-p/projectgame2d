@@ -50,7 +50,7 @@ func destroy() -> void:
 func get_new_animation() -> StringName:
 	var animation_new: StringName
 	if _state == State.WALKING:
-		if velocity.x == 0:
+		if is_equal_approx(velocity.x, 0.0):
 			animation_new = &"idle"
 		else:
 			animation_new = &"walk"
