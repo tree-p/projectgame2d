@@ -1,0 +1,158 @@
+[gd_scene load_steps=15 format=3 uid="uid://uk4g8i5wh7w1"]
+
+[ext_resource type="Texture2D" uid="uid://bcwoywafrflok" path="res://bg/5 Objects/Stones/2.png" id="1_2cmy8"]
+[ext_resource type="Texture2D" uid="uid://dxd4r3c88ha8x" path="res://bg/5 Objects/Ridges/1.png" id="2_ywp76"]
+[ext_resource type="Material" uid="uid://djwm5nol3d801" path="res://level/props/wind_sway.tres" id="3_uxru0"]
+[ext_resource type="Texture2D" uid="uid://b0v68g58copth" path="res://bg/3 Objects/Grass/7.png" id="4_bqlgo"]
+[ext_resource type="Texture2D" uid="uid://1u7km47no136" path="res://bg/3 Objects/Grass/8.png" id="5_i54qn"]
+[ext_resource type="Texture2D" uid="uid://dcscmft56mva1" path="res://bg/3 Objects/Grass/6.png" id="6_6qq04"]
+[ext_resource type="Texture2D" uid="uid://mnu8eive7430" path="res://bg/5 Objects/Grass/6.png" id="7_j3pn5"]
+[ext_resource type="Texture2D" uid="uid://6plu5owbbpnn" path="res://bg/5 Objects/Grass/2.png" id="8_ma7dr"]
+[ext_resource type="Texture2D" uid="uid://sjbek8vl65ku" path="res://bg/5 Objects/Grass/8.png" id="9_sph0k"]
+[ext_resource type="Texture2D" uid="uid://ca0o73tll2mwc" path="res://bg/5 Objects/Grass/5.png" id="10_aowad"]
+[ext_resource type="Texture2D" uid="uid://jtd7twj2s7ia" path="res://bg/5 Objects/Grass/3.png" id="11_lkume"]
+[ext_resource type="Texture2D" uid="uid://c21rv4e5dg8if" path="res://bg/3 Objects/Grass/5.png" id="12_pd7r3"]
+[ext_resource type="Texture2D" uid="uid://f3vl0uv1d2r4" path="res://bg/Individual PNG files/Tileset/objects_misc_animated/object_misc_animated_23.png" id="13_ywp76"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(192, 27)
+
+[node name="Platform_03" type="AnimatableBody2D"]
+z_index = -1
+position = Vector2(-1, 0)
+collision_layer = 8
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -48)
+texture = ExtResource("1_2cmy8")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-35, -18)
+scale = Vector2(1.58811, 2.12268)
+texture = ExtResource("2_ywp76")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(47.4464, -26.7803)
+scale = Vector2(1.49559, 2.67541)
+texture = ExtResource("2_ywp76")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7.5)
+shape = SubResource("1")
+one_way_collision = true
+
+[node name="g67" type="Sprite2D" parent="."]
+z_index = -1
+material = ExtResource("3_uxru0")
+position = Vector2(74.5, -35)
+scale = Vector2(1.34483, 2.28571)
+texture = ExtResource("4_bqlgo")
+
+[node name="B3" type="Sprite2D" parent="."]
+z_index = -2
+material = ExtResource("3_uxru0")
+position = Vector2(14.94, -42.875)
+rotation = -3.14159
+scale = Vector2(2.16828, -3.16071)
+texture = ExtResource("4_bqlgo")
+
+[node name="B4" type="Sprite2D" parent="."]
+z_index = -2
+material = ExtResource("3_uxru0")
+position = Vector2(50, -43)
+rotation = -3.14159
+scale = Vector2(1.76633, -3.23385)
+texture = ExtResource("5_i54qn")
+
+[node name="B5" type="Sprite2D" parent="."]
+z_index = -2
+material = ExtResource("3_uxru0")
+position = Vector2(-19, -45)
+scale = Vector2(1.93478, 3.72727)
+texture = ExtResource("6_6qq04")
+
+[node name="v31" type="Sprite2D" parent="."]
+z_index = 1
+material = ExtResource("3_uxru0")
+position = Vector2(-27.25, 5.5)
+scale = Vector2(2.13636, -4.55556)
+texture = ExtResource("7_j3pn5")
+
+[node name="v35" type="Sprite2D" parent="."]
+z_index = -1
+material = ExtResource("3_uxru0")
+position = Vector2(35, 16)
+scale = Vector2(2.08824, -2.625)
+texture = ExtResource("8_ma7dr")
+
+[node name="v32" type="Sprite2D" parent="."]
+z_index = 1
+material = ExtResource("3_uxru0")
+position = Vector2(92, 3.5)
+scale = Vector2(2.25, -3.21429)
+texture = ExtResource("9_sph0k")
+
+[node name="v33" type="Sprite2D" parent="."]
+z_index = 1
+material = ExtResource("3_uxru0")
+position = Vector2(-85, 7)
+scale = Vector2(1.81818, -3.53846)
+texture = ExtResource("10_aowad")
+
+[node name="v34" type="Sprite2D" parent="."]
+z_index = 1
+material = ExtResource("3_uxru0")
+position = Vector2(61.5, 5.5)
+scale = Vector2(2.63636, -3.15385)
+texture = ExtResource("10_aowad")
+
+[node name="v36" type="Sprite2D" parent="."]
+z_index = -1
+material = ExtResource("3_uxru0")
+position = Vector2(-4.25, 5)
+scale = Vector2(1.86364, -5.33333)
+texture = ExtResource("7_j3pn5")
+
+[node name="v37" type="Sprite2D" parent="."]
+z_index = -1
+material = ExtResource("3_uxru0")
+position = Vector2(-54, 20)
+scale = Vector2(2, -2.625)
+texture = ExtResource("11_lkume")
+
+[node name="g68" type="Sprite2D" parent="."]
+z_index = -1
+material = ExtResource("3_uxru0")
+position = Vector2(-58.6121, -36.2143)
+scale = Vector2(2.52497, 2.39796)
+texture = ExtResource("4_bqlgo")
+
+[node name="g69" type="Sprite2D" parent="."]
+z_index = -1
+material = ExtResource("3_uxru0")
+position = Vector2(42.5216, -35.1071)
+scale = Vector2(1.68817, 2.12755)
+texture = ExtResource("4_bqlgo")
+
+[node name="g70" type="Sprite2D" parent="."]
+z_index = -1
+material = ExtResource("3_uxru0")
+position = Vector2(-31.0047, -37.0285)
+scale = Vector2(2.82791, 2.56735)
+texture = ExtResource("4_bqlgo")
+
+[node name="g71" type="Sprite2D" parent="."]
+z_index = -1
+material = ExtResource("3_uxru0")
+position = Vector2(-45, -36)
+scale = Vector2(1.58323, 3.32653)
+texture = ExtResource("12_pd7r3")
+
+[node name="B6" type="Sprite2D" parent="."]
+z_index = -2
+material = ExtResource("3_uxru0")
+position = Vector2(-1, -85)
+scale = Vector2(1.83928, 1.95893)
+texture = ExtResource("13_ywp76")
+vframes = 2
