@@ -1,18 +1,21 @@
-[gd_scene load_steps=15 format=3 uid="uid://uk4g8i5wh7w1"]
+[gd_scene load_steps=18 format=3 uid="uid://uk4g8i5wh7w1"]
 
 [ext_resource type="Texture2D" uid="uid://bcwoywafrflok" path="res://bg/5 Objects/Stones/2.png" id="1_2cmy8"]
 [ext_resource type="Texture2D" uid="uid://dxd4r3c88ha8x" path="res://bg/5 Objects/Ridges/1.png" id="2_ywp76"]
 [ext_resource type="Material" uid="uid://djwm5nol3d801" path="res://level/props/wind_sway.tres" id="3_uxru0"]
 [ext_resource type="Texture2D" uid="uid://b0v68g58copth" path="res://bg/3 Objects/Grass/7.png" id="4_bqlgo"]
-[ext_resource type="Texture2D" uid="uid://1u7km47no136" path="res://bg/3 Objects/Grass/8.png" id="5_i54qn"]
-[ext_resource type="Texture2D" uid="uid://dcscmft56mva1" path="res://bg/3 Objects/Grass/6.png" id="6_6qq04"]
+[ext_resource type="Texture2D" uid="uid://th74ytmug56d" path="res://bg/PNG/Bushes10/Bush10_1.png" id="5_i54qn"]
+[ext_resource type="Texture2D" uid="uid://ppyrlybboi2n" path="res://bg/PNG/Bushes2/Bush2_2.png" id="6_6qq04"]
 [ext_resource type="Texture2D" uid="uid://mnu8eive7430" path="res://bg/5 Objects/Grass/6.png" id="7_j3pn5"]
+[ext_resource type="Texture2D" uid="uid://c83ap3pul78k2" path="res://bg/PNG/Bushes8/Bush8_1.png" id="7_ma7dr"]
 [ext_resource type="Texture2D" uid="uid://6plu5owbbpnn" path="res://bg/5 Objects/Grass/2.png" id="8_ma7dr"]
 [ext_resource type="Texture2D" uid="uid://sjbek8vl65ku" path="res://bg/5 Objects/Grass/8.png" id="9_sph0k"]
 [ext_resource type="Texture2D" uid="uid://ca0o73tll2mwc" path="res://bg/5 Objects/Grass/5.png" id="10_aowad"]
 [ext_resource type="Texture2D" uid="uid://jtd7twj2s7ia" path="res://bg/5 Objects/Grass/3.png" id="11_lkume"]
-[ext_resource type="Texture2D" uid="uid://c21rv4e5dg8if" path="res://bg/3 Objects/Grass/5.png" id="12_pd7r3"]
+[ext_resource type="Texture2D" uid="uid://cx6be53ovwx5y" path="res://bg/PNG/Bushes9/Bush9_2.png" id="13_sph0k"]
 [ext_resource type="Texture2D" uid="uid://f3vl0uv1d2r4" path="res://bg/Individual PNG files/Tileset/objects_misc_animated/object_misc_animated_23.png" id="13_ywp76"]
+[ext_resource type="Texture2D" uid="uid://clbi2kporop8u" path="res://bg/PNG/Bushes6/Bush6_4.png" id="14_aowad"]
+[ext_resource type="Texture2D" uid="uid://g5hxro8km32s" path="res://bg/PNG/Bushes4/Bush4_1.png" id="15_lkume"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(192, 27)
@@ -52,25 +55,25 @@ texture = ExtResource("4_bqlgo")
 [node name="B3" type="Sprite2D" parent="."]
 z_index = -2
 material = ExtResource("3_uxru0")
-position = Vector2(14.94, -42.875)
+position = Vector2(-1.21204, -65.6385)
 rotation = -3.14159
-scale = Vector2(2.16828, -3.16071)
-texture = ExtResource("4_bqlgo")
+scale = Vector2(0.887239, -0.947131)
+texture = ExtResource("5_i54qn")
 
 [node name="B4" type="Sprite2D" parent="."]
 z_index = -2
 material = ExtResource("3_uxru0")
-position = Vector2(50, -43)
+position = Vector2(63, -58)
 rotation = -3.14159
-scale = Vector2(1.76633, -3.23385)
-texture = ExtResource("5_i54qn")
+scale = Vector2(0.800027, -0.70295)
+texture = ExtResource("6_6qq04")
 
 [node name="B5" type="Sprite2D" parent="."]
 z_index = -2
 material = ExtResource("3_uxru0")
-position = Vector2(-19, -45)
-scale = Vector2(1.93478, 3.72727)
-texture = ExtResource("6_6qq04")
+position = Vector2(-15, -50)
+scale = Vector2(0.712488, 0.819679)
+texture = ExtResource("7_ma7dr")
 
 [node name="v31" type="Sprite2D" parent="."]
 z_index = 1
@@ -124,9 +127,9 @@ texture = ExtResource("11_lkume")
 [node name="g68" type="Sprite2D" parent="."]
 z_index = -1
 material = ExtResource("3_uxru0")
-position = Vector2(-58.6121, -36.2143)
-scale = Vector2(2.52497, 2.39796)
-texture = ExtResource("4_bqlgo")
+position = Vector2(-53, -51)
+scale = Vector2(0.81874, 0.878742)
+texture = ExtResource("13_sph0k")
 
 [node name="g69" type="Sprite2D" parent="."]
 z_index = -1
@@ -138,16 +141,16 @@ texture = ExtResource("4_bqlgo")
 [node name="g70" type="Sprite2D" parent="."]
 z_index = -1
 material = ExtResource("3_uxru0")
-position = Vector2(-31.0047, -37.0285)
-scale = Vector2(2.82791, 2.56735)
-texture = ExtResource("4_bqlgo")
+position = Vector2(44, -49)
+scale = Vector2(1.26168, 1.74939)
+texture = ExtResource("14_aowad")
 
 [node name="g71" type="Sprite2D" parent="."]
 z_index = -1
 material = ExtResource("3_uxru0")
-position = Vector2(-45, -36)
-scale = Vector2(1.58323, 3.32653)
-texture = ExtResource("12_pd7r3")
+position = Vector2(-77, -56)
+scale = Vector2(0.754578, 0.652848)
+texture = ExtResource("15_lkume")
 
 [node name="B6" type="Sprite2D" parent="."]
 z_index = -2
