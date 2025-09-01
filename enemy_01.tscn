@@ -1,12 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://6mtip3ruyn"]
+[gd_scene load_steps=14 format=3 uid="uid://b6b8fnll3inxk"]
 
-[ext_resource type="Texture2D" uid="uid://coj0d33vyyqx1" path="res://player/bullet.webp" id="1"]
-[ext_resource type="AudioStream" uid="uid://duwm7i44o75o2" path="res://enemy/explode.wav" id="2"]
-[ext_resource type="AudioStream" uid="uid://dm7wsawmylc7b" path="res://enemy/hit.wav" id="3"]
-[ext_resource type="Texture2D" uid="uid://bjjywmvba0sve" path="res://enemy/enemy.webp" id="4"]
-[ext_resource type="Script" uid="uid://bwy4wggbw5a0d" path="res://enemy/enemy.gd" id="5"]
-
-[sub_resource type="CanvasItemMaterial" id="1"]
+[ext_resource type="Script" uid="uid://sbtl7od6l05l" path="res://enemy_01.gd" id="1_r81cn"]
+[ext_resource type="Texture2D" uid="uid://cdikioeosg156" path="res://Assets/Spritesheet/monster_level01.png" id="2_ig54x"]
+[ext_resource type="Texture2D" uid="uid://coj0d33vyyqx1" path="res://player/bullet.webp" id="3_dx1uh"]
+[ext_resource type="AudioStream" uid="uid://dm7wsawmylc7b" path="res://enemy/hit.wav" id="4_dvylk"]
+[ext_resource type="AudioStream" uid="uid://duwm7i44o75o2" path="res://enemy/explode.wav" id="5_qxo54"]
 
 [sub_resource type="Animation" id="8"]
 length = 0.001
@@ -237,21 +235,21 @@ _data = {
 &"walk": SubResource("4")
 }
 
-[sub_resource type="CapsuleShape2D" id="5"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhpsy"]
 radius = 18.0
 height = 50.0
 
-[sub_resource type="CanvasItemMaterial" id="6"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_251ve"]
 blend_mode = 1
 
-[sub_resource type="Gradient" id="7"]
+[sub_resource type="Gradient" id="Gradient_v3idb"]
 offsets = PackedFloat32Array(0.5, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
-[node name="Enemy" type="CharacterBody2D"]
+[node name="Enemy_01" type="CharacterBody2D" groups=["Monsters"]]
 collision_layer = 2
-collision_mask = 24
-script = ExtResource("5")
+script = ExtResource("1_r81cn")
+metadata/_custom_type_script = "uid://bwy4wggbw5a0d"
 
 [node name="PlatformDetector" type="RayCast2D" parent="."]
 position = Vector2(0, 6)
@@ -269,12 +267,9 @@ target_position = Vector2(0, 35)
 collision_mask = 24
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-material = SubResource("1")
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("4")
-flip_h = true
-hframes = 8
-vframes = 2
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_ig54x")
+hframes = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -283,14 +278,14 @@ libraries = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -1.5708
-shape = SubResource("5")
+shape = SubResource("CapsuleShape2D_qhpsy")
 
 [node name="Explosion" type="CPUParticles2D" parent="."]
 self_modulate = Color(1, 1, 1, 0.12)
-material = SubResource("6")
+material = SubResource("CanvasItemMaterial_251ve")
 emitting = false
 amount = 32
-texture = ExtResource("1")
+texture = ExtResource("3_dx1uh")
 lifetime = 0.5
 one_shot = true
 speed_scale = 1.2
@@ -300,10 +295,10 @@ emission_shape = 1
 emission_sphere_radius = 16.0
 spread = 180.0
 gravity = Vector2(0, -250)
-color_ramp = SubResource("7")
+color_ramp = SubResource("Gradient_v3idb")
 
 [node name="Hit" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3")
+stream = ExtResource("4_dvylk")
 
 [node name="Explode" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2")
+stream = ExtResource("5_qxo54")

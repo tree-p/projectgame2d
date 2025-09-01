@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcg127152ouya"
-path="res://.godot/imported/cobblestone.png-4fd3fe916681d16125ab7bc554eeb1fd.ctex"
+uid="uid://cdikioeosg156"
+path="res://.godot/imported/monster_level01.png-d41786532f7ade369bef891d744d36f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets_01/platforms/cobblestone.png"
-dest_files=["res://.godot/imported/cobblestone.png-4fd3fe916681d16125ab7bc554eeb1fd.ctex"]
+source_file="res://Assets/Spritesheet/monster_level01.png"
+dest_files=["res://.godot/imported/monster_level01.png-d41786532f7ade369bef891d744d36f0.ctex"]
 
 [params]
 

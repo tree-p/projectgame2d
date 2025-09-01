@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf62ih2cvn3q0"
-path="res://.godot/imported/stone_platform.png-b53291385502a67da85c86644af1ef5c.ctex"
+uid="uid://okspf0ta24mq"
+path="res://.godot/imported/free.png-29cd6f12ec37713ef1d349794977ec72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets_01/platforms/stone_platform.png"
-dest_files=["res://.godot/imported/stone_platform.png-b53291385502a67da85c86644af1ef5c.ctex"]
+source_file="res://Assets/assets_01/platforms/free.png"
+dest_files=["res://.godot/imported/free.png-29cd6f12ec37713ef1d349794977ec72.ctex"]
 
 [params]
 

@@ -9,11 +9,11 @@
 scroll_base_scale = Vector2(0.1, 0)
 
 [node name="bg" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2(320, 0)
+motion_mirroring = Vector2(640, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="bg"]
-position = Vector2(-809, -97)
-scale = Vector2(5, 2.75)
+position = Vector2(-1500, -97)
+scale = Vector2(10, 5)
 texture = ExtResource("1_1nqxe")
 centered = false
 
@@ -22,8 +22,8 @@ motion_scale = Vector2(0.5, 0.5)
 motion_mirroring = Vector2(320, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="far_trees"]
-position = Vector2(-809, -97)
-scale = Vector2(5, 2.75)
+position = Vector2(-1500, -97)
+scale = Vector2(10, 5)
 texture = ExtResource("2_cxn0v")
 centered = false
 
@@ -31,8 +31,8 @@ centered = false
 motion_mirroring = Vector2(320, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="mid_trees"]
-position = Vector2(-809, -97)
-scale = Vector2(5, 2.75)
+position = Vector2(-1500, -97)
+scale = Vector2(10, 5)
 texture = ExtResource("3_sojdf")
 centered = false
 
@@ -41,7 +41,7 @@ motion_scale = Vector2(2, 2)
 motion_mirroring = Vector2(320, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="close_trees"]
-position = Vector2(-809, -97)
-scale = Vector2(5, 2.75)
+position = Vector2(-1500, -97)
+scale = Vector2(10, 5)
 texture = ExtResource("4_ems2w")
 centered = false
