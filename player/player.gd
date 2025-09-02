@@ -23,8 +23,6 @@ var gravity: int = ProjectSettings.get("physics/2d/default_gravity")
 @onready var camera := $Camera as Camera2D
 var _double_jump_charged := false
 
-enum State { STOP, MOVE }
-var state = State.MOVE
 
 func _physics_process(delta: float) -> void:
 	if is_on_floor():
@@ -88,7 +86,3 @@ func try_jump() -> void:
 		return
 	velocity.y = JUMP_VELOCITY
 	jump_sound.play()
-	
-func play_walk_in_animation():
-	state = State.STOP
-	$AnimationPlayer.play("DoorIn")
