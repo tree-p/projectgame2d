@@ -1,9 +1,6 @@
-<<<<<<< HEAD
+
 [gd_scene load_steps=116 format=3 uid="uid://cx8qvtmkhklay"]
-=======
-[gd_scene load_steps=113 format=3 uid="uid://cx8qvtmkhklay"]
->>>>>>> main
-[gd_scene load_steps=116 format=3 uid="uid://hede6boxukpy"]
+
 
 [ext_resource type="TileSet" uid="uid://bkr37o1dujb0o" path="res://level/tile_set_03.tres" id="1_dj5bc"]
 [ext_resource type="PackedScene" uid="uid://cymftaelg173y" path="res://level/background/parallax_background_03.tscn" id="1_x2g6n"]
@@ -1828,16 +1825,14 @@ texture = ExtResource("101_jyqkh")
 position = Vector2(-518, -38)
 target_scene = ExtResource("106_eynya")
 
-<<<<<<< HEAD
+
 [node name="Door" type="Node" parent="."]
 
 [node name="Door2" parent="Door" instance=ExtResource("105_ubtr3")]
 position = Vector2(-518, -38)
 target_scene = ExtResource("106_eynya")
 
-=======
->>>>>>> main
-[node name="Traps" type="Node" parent="."]
+
 
 [node name="traps" parent="Traps" instance=ExtResource("105_o0bn5")]
 position = Vector2(684, 668)
@@ -1857,13 +1852,6 @@ position = Vector2(372, 668)
 [node name="traps_03_3" parent="Traps" instance=ExtResource("106_g44w2")]
 position = Vector2(500, 667)
 <<<<<<< HEAD
-
-[node name="Items" type="Node" parent="."]
-
-[node name="Item_03" parent="Items" instance=ExtResource("109_6vcd0")]
-position = Vector2(1332, -15)
-=======
->>>>>>> main
 
 [node name="Items" type="Node" parent="."]
 
