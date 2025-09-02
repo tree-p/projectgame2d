@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://okspf0ta24mq"
-path="res://.godot/imported/free.png-299ef68bb7b945d65bfcd89f8d1d5f42.ctex"
+uid="uid://bcg127152ouya"
+path="res://.godot/imported/cobblestone.png-6ca0b473880148fc04be1960f0125042.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets_01/platforms/free.png"
-dest_files=["res://.godot/imported/free.png-299ef68bb7b945d65bfcd89f8d1d5f42.ctex"]
+source_file="res://Assets/assets_01/platforms/cobblestone.png"
+dest_files=["res://.godot/imported/cobblestone.png-6ca0b473880148fc04be1960f0125042.ctex"]
 
 [params]
 
