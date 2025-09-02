@@ -1,4 +1,6 @@
-[gd_scene load_steps=46 format=3 uid="uid://cx8qvtmkhklay"]
+
+[gd_scene load_steps=116 format=3 uid="uid://cx8qvtmkhklay"]
+
 
 [ext_resource type="TileSet" uid="uid://bkr37o1dujb0o" path="res://level/tile_set_03.tres" id="1_dj5bc"]
 [ext_resource type="PackedScene" uid="uid://cymftaelg173y" path="res://level/background/parallax_background_03.tscn" id="1_x2g6n"]
@@ -41,6 +43,77 @@
 [ext_resource type="Texture2D" uid="uid://1u7km47no136" path="res://bg/3 Objects/Grass/8.png" id="27_dj5bc"]
 [ext_resource type="Texture2D" uid="uid://b0v68g58copth" path="res://bg/3 Objects/Grass/7.png" id="29_s8jdt"]
 [ext_resource type="Texture2D" uid="uid://dyb52emeof6fa" path="res://bg/5 Objects/Grass/1.png" id="39_1tkdo"]
+
+[ext_resource type="Texture2D" uid="uid://c2qx04my08foe" path="res://bg/5 Objects/Ladders/4.png" id="39_6q8i8"]
+[ext_resource type="Texture2D" uid="uid://dy3li56etqv2o" path="res://bg/Individual PNG files/Tileset/objects_misc_animated/object_misc_animated_26.png" id="39_76hjj"]
+[ext_resource type="PackedScene" uid="uid://uk4g8i5wh7w1" path="res://Level_03_bg/platform_03.tscn" id="40_i7f07"]
+[ext_resource type="Texture2D" uid="uid://dg3au22053p01" path="res://bg/3 Objects/Grass/10.png" id="41_fosfb"]
+[ext_resource type="Texture2D" uid="uid://casr3xw7w1oud" path="res://bg/3 Objects/Grass/4.png" id="42_s3123"]
+[ext_resource type="Texture2D" uid="uid://o4s6meymijv1" path="res://bg/Individual PNG files/Tileset/objects_misc_animated/object_misc_animated_6.png" id="43_vt886"]
+[ext_resource type="Texture2D" uid="uid://dr3to4qjioiie" path="res://bg/PNG/Bushes4/Bush4_3.png" id="44_o0bn5"]
+[ext_resource type="Texture2D" uid="uid://dpl4sar8loxao" path="res://bg/Individual PNG files/Tileset/bg_objects/bg_objects_18.png" id="45_jdlpp"]
+[ext_resource type="Texture2D" uid="uid://g5hxro8km32s" path="res://bg/PNG/Bushes4/Bush4_1.png" id="46_g44w2"]
+[ext_resource type="Texture2D" uid="uid://xjhdgnnl87pp" path="res://bg/Individual PNG files/Tileset/bg_objects/bg_objects_17.png" id="46_ol04h"]
+[ext_resource type="Texture2D" uid="uid://ysbcfhfxjblc" path="res://bg/PNG/Bushes2/Bush2_4.png" id="47_g44w2"]
+[ext_resource type="Texture2D" uid="uid://bojrtsdo84r1h" path="res://bg/Individual PNG files/Monster/scorpion-red/scorpion-red-1.png" id="48_dxy3w"]
+[ext_resource type="Texture2D" uid="uid://baj5osql8jl64" path="res://bg/PNG/Bushes10/Bush10_2.png" id="48_ubtr3"]
+[ext_resource type="Texture2D" uid="uid://csrfx62s5eewu" path="res://bg/craftpix-net-370528-free-medieval-ruins-cartoon-2d-tileset/PNG/Environment/Sign_01.png" id="49_at7bf"]
+[ext_resource type="Texture2D" uid="uid://c50pwr0jqsv5q" path="res://bg/PNG/Bushes7/Bush7_2.png" id="49_ubtr3"]
+[ext_resource type="Texture2D" uid="uid://mnu8eive7430" path="res://bg/5 Objects/Grass/6.png" id="49_w117y"]
+[ext_resource type="Texture2D" uid="uid://jtd7twj2s7ia" path="res://bg/5 Objects/Grass/3.png" id="50_at7bf"]
+[ext_resource type="Texture2D" uid="uid://bktv035kbpvju" path="res://bg/PNG/Bushes9/Bush9_1.png" id="50_eynya"]
+[ext_resource type="Texture2D" uid="uid://c3urj50k2kbgj" path="res://bg/PNG/crystals_black/crystal_black3.png" id="51_6vcd0"]
+[ext_resource type="Texture2D" uid="uid://clm64tjanmn6e" path="res://bg/PNG/Bushes10/Bush10_4.png" id="51_eynya"]
+[ext_resource type="Texture2D" uid="uid://dnfewvhmxamlw" path="res://bg/5 Objects/Grass/7.png" id="51_gdlgy"]
+[ext_resource type="Texture2D" uid="uid://ca0o73tll2mwc" path="res://bg/5 Objects/Grass/5.png" id="52_qaen7"]
+[ext_resource type="Texture2D" uid="uid://xp0e3iuq6k6j" path="res://bg/Individual PNG files/Tileset/bg_objects/bg_objects_13.png" id="53_l8brn"]
+[ext_resource type="Texture2D" uid="uid://dxo47wq6olfw2" path="res://bg/Individual PNG files/Tileset/bg_objects/bg_objects_11.png" id="54_244jd"]
+[ext_resource type="Texture2D" uid="uid://bfim6b8ih63l8" path="res://bg/Individual PNG files/Tileset/bg_objects/bg_objects_16.png" id="55_5uieg"]
+[ext_resource type="Texture2D" uid="uid://dp36t5vogc2tb" path="res://bg/Individual PNG files/Monster/scorpion-black/scorpion-black-0.png" id="56_sag1c"]
+[ext_resource type="Texture2D" uid="uid://dsaq66r4vtqho" path="res://bg/64/Gates_dark_shadow2.png" id="56_wo84q"]
+[ext_resource type="Texture2D" uid="uid://be7x8v1v7gpuc" path="res://bg/Individual PNG files/Tileset/objects_misc_animated/object_misc_animated_3.png" id="57_j66pw"]
+[ext_resource type="Texture2D" uid="uid://cpbehsmsrsvly" path="res://bg/craftpix-net-370528-free-medieval-ruins-cartoon-2d-tileset/PNG/Platformer/Wooden_Barrel.png" id="60_gdlgy"]
+[ext_resource type="Texture2D" uid="uid://8wkfbkalmejv" path="res://bg/Individual PNG files/Tileset/objects_fountain_animated/objects_fountain_animated_2.png" id="64_pniie"]
+[ext_resource type="Texture2D" uid="uid://6iq6yx6l6dto" path="res://bg/craftpix-net-370528-free-medieval-ruins-cartoon-2d-tileset/PNG/Environment/Sign_02.png" id="64_qaen7"]
+[ext_resource type="Texture2D" uid="uid://d4auvus8fo6ov" path="res://bg/64/white_crystal_vertical1.png" id="64_r85uh"]
+[ext_resource type="Texture2D" uid="uid://bnxikyr1woi53" path="res://bg/Individual PNG files/Tileset/objects_fountain_animated/objects_fountain_animated_6.png" id="65_3m4ql"]
+[ext_resource type="Texture2D" uid="uid://cmf3mdlfl6dds" path="res://bg/craftpix-net-370528-free-medieval-ruins-cartoon-2d-tileset/PNG/Environment/Sign_05.png" id="65_l8brn"]
+[ext_resource type="Texture2D" uid="uid://d0f86xche5umb" path="res://bg/Individual PNG files/Tileset/objects_fountain_animated/objects_fountain_animated_4.png" id="66_iupnq"]
+[ext_resource type="PackedScene" uid="uid://cctm6qnybp17q" path="res://Level_03_bg/enemy_03.tscn" id="66_vt886"]
+[ext_resource type="Texture2D" uid="uid://tcxeu8f5reh0" path="res://bg/PNG/crystals_orange/crystal_orange2.png" id="68_7loie"]
+[ext_resource type="Texture2D" uid="uid://th74ytmug56d" path="res://bg/PNG/Bushes10/Bush10_1.png" id="69_dgxmh"]
+[ext_resource type="Texture2D" uid="uid://ug0nf3hib45b" path="res://bg/64/mushroom1_light_shadow1.png" id="71_jwpr8"]
+[ext_resource type="Texture2D" uid="uid://cuqheau10p4jj" path="res://bg/64/mushroom1_light_shadow2.png" id="77_51hr3"]
+[ext_resource type="Texture2D" uid="uid://bnhmsu3lmf806" path="res://bg/Individual PNG files/Tileset/bg_objects/bg_objects_06.png" id="79_k252k"]
+[ext_resource type="Texture2D" uid="uid://c521jek3n2sut" path="res://bg/64/Gates_dark_shadow1.png" id="84_0atwm"]
+[ext_resource type="Texture2D" uid="uid://d343g1setx8s4" path="res://bg/64/Dark_totem_dark_shadow5.png" id="86_0ll2p"]
+[ext_resource type="Texture2D" uid="uid://crg0mmf3pprpt" path="res://bg/64/Dinosaur_skeleton__head_dark_shadow.png" id="94_mv8q2"]
+[ext_resource type="Texture2D" uid="uid://b8wfpe2l73ahp" path="res://bg/64/Gates_light_shadow3.png" id="96_rmvvf"]
+[ext_resource type="Texture2D" uid="uid://bof5pgv1l4tew" path="res://bg/PNG/crystals_white-gold/crystal_white-gold1.png" id="97_7do3k"]
+[ext_resource type="Texture2D" uid="uid://dx2p42ht1mrve" path="res://bg/64/Dinosaur_skeleton__light_dark_shadow.png" id="98_ivaxu"]
+[ext_resource type="Texture2D" uid="uid://b7buw5ghxe0xd" path="res://bg/PNG/crystals_lime/crystal_lime5.png" id="99_l5cw3"]
+[ext_resource type="Texture2D" uid="uid://cecgy5580i3t5" path="res://bg/64/caveman_statue_light_shadow1.png" id="101_jyqkh"]
+[ext_resource type="PackedScene" uid="uid://kcskxmor3elo" path="res://Level_03_bg/traps_03.tscn" id="105_o0bn5"]
+[ext_resource type="PackedScene" uid="uid://c78qbm1sg3b0h" path="res://Level_03_bg/Door.tscn" id="105_ubtr3"]
+[ext_resource type="PackedScene" uid="uid://ctgumjaytuoch" path="res://Scenes_level02/level.tscn" id="106_eynya"]
+[ext_resource type="PackedScene" uid="uid://djlbnaoerux40" path="res://Level_03_bg/traps_03_1.tscn" id="106_g44w2"]
+[ext_resource type="PackedScene" uid="uid://chnspcup50bpb" path="res://Level_03_bg/item_03.tscn" id="109_6vcd0"]
+
+[sub_resource type="Animation" id="Animation_vt886"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(881, 23)]
+}
+
 
 [sub_resource type="Animation" id="1"]
 resource_name = "move"
@@ -1964,6 +2037,59 @@ texture = ExtResource("19_ikqhr")
 [node name="R2" type="Sprite2D" parent="Rocks"]
 visible = false
 z_index = -2
+
+position = Vector2(29, 625)
+scale = Vector2(2.625, 2.4375)
+texture = ExtResource("79_k252k")
+
+[node name="R6" type="Sprite2D" parent="Rocks"]
+z_index = -2
+position = Vector2(150, 271)
+texture = ExtResource("39_6q8i8")
+
+[node name="CavemanStatueLightShadow1" type="Sprite2D" parent="Rocks"]
+position = Vector2(666, 241)
+scale = Vector2(0.757813, 0.796875)
+texture = ExtResource("101_jyqkh")
+
+[node name="Door" type="Node" parent="."]
+
+[node name="Door2" parent="Door" instance=ExtResource("105_ubtr3")]
+position = Vector2(-518, -38)
+target_scene = ExtResource("106_eynya")
+
+[node name="Door3" parent="Door" instance=ExtResource("105_ubtr3")]
+position = Vector2(-518, -38)
+target_scene = ExtResource("106_eynya")
+
+[node name="Door2" type="Node" parent="."]
+
+[node name="Items" type="Node" parent="."]
+
+[node name="Item_03" parent="Items" instance=ExtResource("109_6vcd0")]
+position = Vector2(1332, -15)
+
+[node name="Traps" type="Node" parent="."]
+
+[node name="Traps#traps" parent="Traps" instance=ExtResource("105_o0bn5")]
+position = Vector2(684, 668)
+
+[node name="Traps#traps2" parent="Traps" instance=ExtResource("105_o0bn5")]
+position = Vector2(809, 668)
+
+[node name="Traps#traps3" parent="Traps" instance=ExtResource("105_o0bn5")]
+position = Vector2(913, 668)
+
+[node name="Traps#traps_03_1" parent="Traps" instance=ExtResource("106_g44w2")]
+position = Vector2(243, 669)
+
+[node name="Traps#traps_03_2" parent="Traps" instance=ExtResource("106_g44w2")]
+position = Vector2(372, 668)
+
+[node name="Traps#traps_03_3" parent="Traps" instance=ExtResource("106_g44w2")]
+position = Vector2(500, 667)
+=======
 position = Vector2(72, 639)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("19_ikqhr")
+
