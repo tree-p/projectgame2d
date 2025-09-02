@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://djlbnaoerux40"]
+
+[ext_resource type="Script" uid="uid://bpsmlgay4lab1" path="res://Level_03_bg/traps_03.gd" id="1_hvut2"]
+[ext_resource type="Texture2D" uid="uid://f0tt45sehpip" path="res://bg/17.png" id="2_138oq"]
+[ext_resource type="Texture2D" uid="uid://c5k76v7byir5j" path="res://bg/18.png" id="3_2ktlk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_riux4"]
+size = Vector2(127, 101)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_25e7u"]
+size = Vector2(129, 101)
+
+[node name="traps_03_1" type="Node2D"]
+script = ExtResource("1_hvut2")
+
+[node name="spikes" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spikes"]
+position = Vector2(32.5, 35.5)
+shape = SubResource("RectangleShape2D_riux4")
+
+[node name="Sprite2D" type="Sprite2D" parent="spikes"]
+position = Vector2(0.740001, 7.92988)
+scale = Vector2(0.511563, 0.483432)
+texture = ExtResource("2_138oq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="spikes"]
+position = Vector2(0.249999, 59)
+scale = Vector2(0.503906, 0.4375)
+texture = ExtResource("3_2ktlk")
+
+[node name="Sprite2D3" type="Sprite2D" parent="spikes"]
+position = Vector2(65.75, 7.875)
+scale = Vector2(0.511719, 0.482323)
+texture = ExtResource("2_138oq")
+
+[node name="Sprite2D4" type="Sprite2D" parent="spikes"]
+position = Vector2(65.5, 59)
+scale = Vector2(0.523438, 0.4375)
+texture = ExtResource("3_2ktlk")
+
+[node name="Area2D" type="Area2D" parent="spikes"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spikes/Area2D"]
+position = Vector2(32.5, 35.5)
+shape = SubResource("RectangleShape2D_25e7u")
+
+[connection signal="body_entered" from="spikes/Area2D" to="." method="_on_area_2d_body_entered"]
