@@ -12,7 +12,7 @@ metadata/_custom_type_script = "uid://beqjrviacmvtt"
 [node name="Level_01" parent="." instance=ExtResource("2_2hc8g")]
 
 [node name="Player" parent="Level_01" instance=ExtResource("3_jfclb")]
-position = Vector2(-1111, 627)
+position = Vector2(-718, 619)
 
 [node name="InterfaceLayer" type="CanvasLayer" parent="."]
 layer = 100

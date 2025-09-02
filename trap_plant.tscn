@@ -1,38 +1,36 @@
-[gd_scene load_steps=14 format=3 uid="uid://cibsonw4vpe7i"]
+[gd_scene load_steps=12 format=3 uid="uid://cibsonw4vpe7i"]
 
-[ext_resource type="Texture2D" path="res://Assets/Spritesheet/Plant.png" id="1_8x4y5"]
-[ext_resource type="Script" path="res://trap_plant.gd" id="1_lgu1f"]
+[ext_resource type="Texture2D" uid="uid://1cesobteu5fs" path="res://assets_01/Plant.png" id="1_8x4y5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lgu1f"]
 size = Vector2(25, 30)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgu1f"]
+atlas = ExtResource("1_8x4y5")
+region = Rect2(33, 440, 33, 40)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_63jan"]
 atlas = ExtResource("1_8x4y5")
-region = Rect2(800, 350, 32, 35)
+region = Rect2(231, 440, 33, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t7e0p"]
 atlas = ExtResource("1_8x4y5")
-region = Rect2(896, 350, 32, 35)
+region = Rect2(330, 440, 33, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lwal6"]
 atlas = ExtResource("1_8x4y5")
-region = Rect2(992, 350, 32, 35)
+region = Rect2(1188, 440, 33, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_au11v"]
 atlas = ExtResource("1_8x4y5")
-region = Rect2(1088, 350, 32, 35)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_db1l8"]
-atlas = ExtResource("1_8x4y5")
-region = Rect2(1184, 350, 32, 35)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nudg7"]
-atlas = ExtResource("1_8x4y5")
-region = Rect2(1280, 350, 32, 35)
+region = Rect2(1287, 440, 33, 40)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_871mu"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgu1f")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_63jan")
 }, {
@@ -44,12 +42,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_au11v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_db1l8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nudg7")
 }],
 "loop": true,
 "name": &"cut",
@@ -94,7 +86,6 @@ _data = {
 }
 
 [node name="trap_plant" type="Node2D" groups=["Traps"]]
-script = ExtResource("1_lgu1f")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." groups=["Traps"]]
 
