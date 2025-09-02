@@ -1,0 +1,82 @@
+[gd_scene load_steps=10 format=3 uid="uid://mifgk7wj30xg"]
+
+[ext_resource type="Script" uid="uid://bk1uo6litkqie" path="res://Level_and_Game_02_dontuse002/static_body_2d.gd" id="1_a7br7"]
+[ext_resource type="Texture2D" uid="uid://byaftiynf4o37" path="res://Level_and_Game_02_dontuse002/trap/red01.png" id="1_y5y1m"]
+[ext_resource type="Texture2D" uid="uid://bc07hr5iwvnbs" path="res://Level_and_Game_02_dontuse002/trap/red02.png" id="2_a7br7"]
+[ext_resource type="Texture2D" uid="uid://5rwlchcp18yu" path="res://Level_and_Game_02_dontuse002/trap/red03.png" id="3_l3ka7"]
+[ext_resource type="Texture2D" uid="uid://ji5oyrruej0m" path="res://Level_and_Game_02_dontuse002/trap/red04.png" id="4_t4as5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r4m2p"]
+radius = 12.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l2mpi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_y5y1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_a7br7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_l3ka7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_t4as5")
+}],
+"loop": true,
+"name": &"Red_suriken",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_q0qrq"]
+resource_name = "RESET"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D/AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(-0.0666667, 0.0666667, 0.3, 0.5, 0.733333, 0.966667, 1.16667, 1.43333, 1.76667, 2.1, 2.3, 2.4, 2.46667, 3.13333, 3.96667, 4.36667, 5.46667, 5.8, 6.13333, 6.46667, 6.76667, 7.1, 7.43333, 7.73333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 2, 1, 0, 4, 5, 6, 0, 7, 1, 3, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_plwjk"]
+_data = {
+&"RESET": SubResource("Animation_q0qrq")
+}
+
+[node name="Red_suriken" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["Traps"]]
+script = ExtResource("1_a7br7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_r4m2p")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D/CollisionShape2D"]
+position = Vector2(0, -8.47033e-22)
+scale = Vector2(1.29412, 1.14706)
+sprite_frames = SubResource("SpriteFrames_l2mpi")
+animation = &"Red_suriken"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_plwjk")
+}
