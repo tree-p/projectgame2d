@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://koy50jnkg4y1"
-path="res://.godot/imported/1.png-11f57e017831bfbdc9ebad5a99fdb8df.ctex"
+uid="uid://37mr7ouqaqyj"
+path="res://.godot/imported/g01-removebg-preview.png-32d7dce3bf2323b1d9d9456223887de2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bg/3 Objects/Stones/1.png"
-dest_files=["res://.godot/imported/1.png-11f57e017831bfbdc9ebad5a99fdb8df.ctex"]
+source_file="res://bg/3 Objects/flower02/g01-removebg-preview.png"
+dest_files=["res://.godot/imported/g01-removebg-preview.png-32d7dce3bf2323b1d9d9456223887de2.ctex"]
 
 [params]
 

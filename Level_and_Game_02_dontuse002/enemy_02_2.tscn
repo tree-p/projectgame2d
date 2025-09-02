@@ -1,10 +1,48 @@
-[gd_scene load_steps=15 format=3 uid="uid://cip08d5muh1wi"]
+[gd_scene load_steps=16 format=3 uid="uid://cip08d5muh1wi"]
 
 [ext_resource type="Script" uid="uid://bwy4wggbw5a0d" path="res://enemy/enemy.gd" id="1_qp48j"]
 [ext_resource type="Texture2D" uid="uid://cxakc1r40epqo" path="res://Level_and_Game_02_dontuse002/Enemy02/with_outline/DemonKinWalk001-Sheet.png" id="2_0dchp"]
 [ext_resource type="Texture2D" uid="uid://coj0d33vyyqx1" path="res://player/bullet.webp" id="3_oi3wh"]
 [ext_resource type="AudioStream" uid="uid://dm7wsawmylc7b" path="res://enemy/hit.wav" id="4_bdxs3"]
 [ext_resource type="AudioStream" uid="uid://duwm7i44o75o2" path="res://enemy/explode.wav" id="5_wceyi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gc2cj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [sub_resource type="CanvasItemMaterial" id="1"]
 
@@ -237,9 +275,9 @@ _data = {
 &"walk": SubResource("4")
 }
 
-[sub_resource type="CapsuleShape2D" id="5"]
-radius = 24.0
-height = 48.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lewad"]
+radius = 20.0
+height = 40.0
 
 [sub_resource type="CanvasItemMaterial" id="6"]
 blend_mode = 1
@@ -268,7 +306,17 @@ position = Vector2(15.5, -3)
 target_position = Vector2(0, 35)
 collision_mask = 24
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.90735e-06, 1.90735e-06)
+scale = Vector2(0.1625, 0.19881)
+sprite_frames = SubResource("SpriteFrames_gc2cj")
+animation = &"walk"
+frame = 1
+frame_progress = 0.273394
+flip_h = true
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 material = SubResource("1")
 scale = Vector2(1.84219, 1.49063)
 texture = ExtResource("2_0dchp")
@@ -281,7 +329,7 @@ libraries = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -1.5708
-shape = SubResource("5")
+shape = SubResource("CapsuleShape2D_lewad")
 
 [node name="Explosion" type="CPUParticles2D" parent="."]
 self_modulate = Color(1, 1, 1, 0.12)
