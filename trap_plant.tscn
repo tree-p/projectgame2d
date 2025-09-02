@@ -1,0 +1,112 @@
+[gd_scene load_steps=14 format=3 uid="uid://cibsonw4vpe7i"]
+
+[ext_resource type="Texture2D" path="res://Assets/Spritesheet/Plant.png" id="1_8x4y5"]
+[ext_resource type="Script" path="res://trap_plant.gd" id="1_lgu1f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lgu1f"]
+size = Vector2(25, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63jan"]
+atlas = ExtResource("1_8x4y5")
+region = Rect2(800, 350, 32, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7e0p"]
+atlas = ExtResource("1_8x4y5")
+region = Rect2(896, 350, 32, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwal6"]
+atlas = ExtResource("1_8x4y5")
+region = Rect2(992, 350, 32, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_au11v"]
+atlas = ExtResource("1_8x4y5")
+region = Rect2(1088, 350, 32, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_db1l8"]
+atlas = ExtResource("1_8x4y5")
+region = Rect2(1184, 350, 32, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nudg7"]
+atlas = ExtResource("1_8x4y5")
+region = Rect2(1280, 350, 32, 35)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_871mu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63jan")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7e0p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwal6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_au11v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_db1l8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nudg7")
+}],
+"loop": true,
+"name": &"cut",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_3w2qw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody2D/CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_cqjoh"]
+resource_name = "cut"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody2D/CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_obn5y"]
+_data = {
+&"RESET": SubResource("Animation_3w2qw"),
+&"cut": SubResource("Animation_cqjoh")
+}
+
+[node name="trap_plant" type="Node2D" groups=["Traps"]]
+script = ExtResource("1_lgu1f")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["Traps"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_lgu1f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D/CollisionShape2D"]
+sprite_frames = SubResource("SpriteFrames_871mu")
+animation = &"cut"
+metadata/_edit_lock_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_obn5y")
+}

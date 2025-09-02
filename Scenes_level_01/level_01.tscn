@@ -1,6 +1,8 @@
+
 [gd_scene load_steps=5 format=4 uid="uid://rdcdcsyj6ojb"]
 
 [ext_resource type="Texture2D" uid="uid://okspf0ta24mq" path="res://assets_01/platforms/free.png" id="1_8yjt1"]
+
 [ext_resource type="PackedScene" uid="uid://b0vcki63tv1pf" path="res://level/background/parallax_background_01.tscn" id="2_qdyr6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qdyr6"]
@@ -42,6 +44,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_qdyr6")
 
 [node name="Level_01" type="Node2D"]
+position = Vector2(48, 232)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(4, 4)
@@ -49,3 +52,4 @@ tile_map_data = PackedByteArray("AAD6/wUAAAACAAAAAAD7/wUAAAACAAAAAAD9/wUAAAACAAA
 tile_set = SubResource("TileSet_jru7q")
 
 [node name="ParallaxBackground_01" parent="." instance=ExtResource("2_qdyr6")]
+
