@@ -43,6 +43,7 @@
 [ext_resource type="Texture2D" uid="uid://1u7km47no136" path="res://bg/3 Objects/Grass/8.png" id="27_dj5bc"]
 [ext_resource type="Texture2D" uid="uid://b0v68g58copth" path="res://bg/3 Objects/Grass/7.png" id="29_s8jdt"]
 [ext_resource type="Texture2D" uid="uid://dyb52emeof6fa" path="res://bg/5 Objects/Grass/1.png" id="39_1tkdo"]
+
 [ext_resource type="Texture2D" uid="uid://c2qx04my08foe" path="res://bg/5 Objects/Ladders/4.png" id="39_6q8i8"]
 [ext_resource type="Texture2D" uid="uid://dy3li56etqv2o" path="res://bg/Individual PNG files/Tileset/objects_misc_animated/object_misc_animated_26.png" id="39_76hjj"]
 [ext_resource type="PackedScene" uid="uid://uk4g8i5wh7w1" path="res://Level_03_bg/platform_03.tscn" id="40_i7f07"]
@@ -112,6 +113,7 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(881, 23)]
 }
+
 
 [sub_resource type="Animation" id="1"]
 resource_name = "move"
@@ -2032,6 +2034,7 @@ z_index = -2
 position = Vector2(-356, -17)
 texture = ExtResource("19_ikqhr")
 
+
 [node name="Door2" parent="Door" instance=ExtResource("105_ubtr3")]
 position = Vector2(-518, -38)
 target_scene = ExtResource("106_eynya")
@@ -2066,4 +2069,5 @@ position = Vector2(372, 668)
 
 [node name="Traps#traps_03_3" parent="Traps" instance=ExtResource("106_g44w2")]
 position = Vector2(500, 667)
+
 
