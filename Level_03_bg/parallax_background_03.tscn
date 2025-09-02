@@ -2069,5 +2069,3 @@ position = Vector2(372, 668)
 
 [node name="Traps#traps_03_3" parent="Traps" instance=ExtResource("106_g44w2")]
 position = Vector2(500, 667)
-
-
