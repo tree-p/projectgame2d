@@ -1,8 +1,6 @@
-<<<<<<< HEAD
+
 [gd_scene load_steps=116 format=3 uid="uid://cx8qvtmkhklay"]
-=======
-[gd_scene load_steps=113 format=3 uid="uid://cx8qvtmkhklay"]
->>>>>>> main
+
 
 [ext_resource type="TileSet" uid="uid://bkr37o1dujb0o" path="res://level/tile_set_03.tres" id="1_dj5bc"]
 [ext_resource type="PackedScene" uid="uid://cymftaelg173y" path="res://level/background/parallax_background_03.tscn" id="1_x2g6n"]
@@ -112,11 +110,14 @@
 <<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://c78qbm1sg3b0h" path="res://Level_03_bg/Door.tscn" id="105_ubtr3"]
 [ext_resource type="PackedScene" uid="uid://ctgumjaytuoch" path="res://level/level.tscn" id="106_eynya"]
+[ext_resource type="PackedScene" uid="uid://c78qbm1sg3b0h" path="res://Level_03_bg/Door.tscn" id="105_ubtr3"]
+[ext_resource type="PackedScene" uid="uid://ctgumjaytuoch" path="res://Scenes_level02/level.tscn" id="106_eynya"]
 [ext_resource type="PackedScene" uid="uid://djlbnaoerux40" path="res://Level_03_bg/traps_03_1.tscn" id="106_g44w2"]
 [ext_resource type="PackedScene" uid="uid://chnspcup50bpb" path="res://Level_03_bg/item_03.tscn" id="109_6vcd0"]
 =======
 [ext_resource type="PackedScene" uid="uid://djlbnaoerux40" path="res://Level_03_bg/traps_03_1.tscn" id="106_g44w2"]
 >>>>>>> main
+[ext_resource type="PackedScene" uid="uid://chnspcup50bpb" path="res://Level_03_bg/item_03.tscn" id="109_6vcd0"]
 
 [sub_resource type="Animation" id="Animation_vt886"]
 length = 0.001
@@ -1818,16 +1819,20 @@ position = Vector2(666, 241)
 scale = Vector2(0.757813, 0.796875)
 texture = ExtResource("101_jyqkh")
 
-<<<<<<< HEAD
 [node name="Door" type="Node" parent="."]
 
 [node name="Door2" parent="Door" instance=ExtResource("105_ubtr3")]
 position = Vector2(-518, -38)
 target_scene = ExtResource("106_eynya")
 
-=======
->>>>>>> main
-[node name="Traps" type="Node" parent="."]
+
+[node name="Door" type="Node" parent="."]
+
+[node name="Door2" parent="Door" instance=ExtResource("105_ubtr3")]
+position = Vector2(-518, -38)
+target_scene = ExtResource("106_eynya")
+
+
 
 [node name="traps" parent="Traps" instance=ExtResource("105_o0bn5")]
 position = Vector2(684, 668)
@@ -1852,5 +1857,3 @@ position = Vector2(500, 667)
 
 [node name="Item_03" parent="Items" instance=ExtResource("109_6vcd0")]
 position = Vector2(1332, -15)
-=======
->>>>>>> main

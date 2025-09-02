@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://vh7pmputa7r3"]
+[gd_scene load_steps=18 format=3 uid="uid://ctworenkl7m5q"]
 
 [ext_resource type="Script" uid="uid://c6o6uyfs0n35h" path="res://player/player.gd" id="3"]
 [ext_resource type="AudioStream" uid="uid://sjod173axgwf" path="res://player/jump.wav" id="5"]
@@ -205,7 +205,7 @@ position = Vector2(0, -14)
 texture = ExtResource("9")
 hframes = 8
 vframes = 8
-frame = 42
+frame = 11
 
 [node name="Gun" type="Marker2D" parent="Sprite2D"]
 position = Vector2(14, 1)
