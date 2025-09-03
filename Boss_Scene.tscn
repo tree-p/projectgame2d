@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://drh01msmqbsm1"]
 
 [ext_resource type="TileSet" uid="uid://08mkofgbxx70" path="res://level/tileset.tres" id="1_3kwwr"]
-[ext_resource type="Texture2D" uid="uid://bhrsv2d6org24" path="res://ChatGPT Image 3 ก.ย. 2568 18_24_58.png" id="2_cwd8b"]
+[ext_resource type="Texture2D" uid="uid://bei23qaaopwhy" path="res://ChatGPT Image 3 ก.ย. 2568 18_24_58.png" id="2_cwd8b"]
 [ext_resource type="PackedScene" uid="uid://fbo6nek37bbr" path="res://energy_wave.tscn" id="2_xkdbt"]
 [ext_resource type="PackedScene" uid="uid://xaxcxrwtt6by" path="res://game_level_05.tscn" id="3_xkdbt"]
 [ext_resource type="PackedScene" uid="uid://cxtewh5r77r8f" path="res://boss.tscn" id="4_cwd8b"]
