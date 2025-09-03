@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://bdsyy146bxx36"]
 
-[ext_resource type="Texture2D" uid="uid://d4m6id57xeh5l" path="res://assets_01/monster_level01.png" id="1_ayrpq"]
+[ext_resource type="Texture2D" uid="uid://bj3jdihvxog8h" path="res://assets_01/monster_level01.png" id="1_ayrpq"]
 [ext_resource type="Script" uid="uid://bwy4wggbw5a0d" path="res://enemy/enemy.gd" id="1_r81cn"]
 [ext_resource type="Texture2D" uid="uid://coj0d33vyyqx1" path="res://player/bullet.webp" id="3_dx1uh"]
 [ext_resource type="AudioStream" uid="uid://dm7wsawmylc7b" path="res://enemy/hit.wav" id="4_dvylk"]

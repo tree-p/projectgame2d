@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=34 format=3 uid="uid://08mkofgbxx70"]
+[gd_resource type="TileSet" load_steps=34 format=3 uid="uid://chk0ndcjmsjdk"]
 
 [ext_resource type="Texture2D" uid="uid://d0ops71sk562g" path="res://level/tiles.webp" id="1"]
 [ext_resource type="Texture2D" uid="uid://cu7r37tlntcia" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/Tileset_64x64.png" id="2_2o3vj"]
