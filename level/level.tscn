@@ -1,11 +1,11 @@
 [gd_scene load_steps=24 format=3 uid="uid://ctgumjaytuoch"]
 
-[ext_resource type="TileSet" uid="uid://08mkofgbxx70" path="res://level/tileset.tres" id="1"]
+[ext_resource type="TileSet" uid="uid://08mkofgbxx70" path="res://level/DREAM_tileset.tres" id="1"]
 [ext_resource type="PackedScene" uid="uid://6mtip3ruyn" path="res://enemy/enemy.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://cky6e5nl0nyod" path="res://level/platforms/platform.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://c3dh7xb6ef76q" path="res://level/coin.tscn" id="4"]
 [ext_resource type="Texture2D" uid="uid://bxsmiv7k3fngt" path="res://level/platforms/moving_platform.webp" id="6"]
-[ext_resource type="PackedScene" uid="uid://cw6nldo3rjyyq" path="res://level/background/parallax_background.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://dxfs5bmvo3f71" path="res://level/background/parallax_background.tscn" id="7"]
 [ext_resource type="Texture2D" uid="uid://bj6am5nfc0k73" path="res://level/props/grass_1.webp" id="10"]
 [ext_resource type="Texture2D" uid="uid://ddmq5iwm2qd1j" path="res://level/props/flower_1.webp" id="11"]
 [ext_resource type="Texture2D" uid="uid://bju7r7jqn8bqy" path="res://level/props/grass_2.webp" id="12"]
@@ -1290,7 +1290,7 @@ position = Vector2(60, 0)
 
 [node name="Platform" parent="Platforms" instance=ExtResource("3")]
 z_index = 0
-position = Vector2(707, 400)
+position = Vector2(800, 214.882)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform"]
 callback_mode_process = 0

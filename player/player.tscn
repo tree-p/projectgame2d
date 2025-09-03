@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ctworenkl7m5q"]
+[gd_scene load_steps=18 format=3 uid="uid://bu1admtatwfmy"]
 
 [ext_resource type="Script" uid="uid://c6o6uyfs0n35h" path="res://player/player.gd" id="3"]
 [ext_resource type="AudioStream" uid="uid://sjod173axgwf" path="res://player/jump.wav" id="5"]
@@ -205,7 +205,7 @@ position = Vector2(0, -14)
 texture = ExtResource("9")
 hframes = 8
 vframes = 8
-frame = 30
+frame = 42
 
 [node name="Gun" type="Marker2D" parent="Sprite2D"]
 position = Vector2(14, 1)
@@ -231,6 +231,7 @@ limit_left = -715
 limit_top = -250
 limit_right = 1425
 limit_bottom = 690
+position_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -14)
