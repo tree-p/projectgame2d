@@ -1,8 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://cc8wwcg6my5ri"]
 
 [ext_resource type="Script" uid="uid://beqjrviacmvtt" path="res://game.gd" id="1_g0u2n"]
+
 [ext_resource type="PackedScene" uid="uid://drsgdavdfkrt" path="res://Level_03_bg/Pause_menu_singleplayer_03.tscn" id="2_g0u2n"]
 [ext_resource type="PackedScene" uid="uid://b3qufoiv46eak" path="res://Level_03_bg/player_03.tscn" id="4_g0u2n"]
+
 [ext_resource type="PackedScene" uid="uid://cx8qvtmkhklay" path="res://Level_03_bg/parallax_background_03.tscn" id="5_bha6g"]
 
 [node name="Game" type="Node"]
@@ -20,4 +22,6 @@ layer = 100
 
 [node name="Pause_menu_03" parent="InterfaceLayer" instance=ExtResource("2_g0u2n")]
 
+
 [connection signal="coin_collected" from="Level_03/Player_03" to="InterfaceLayer/Pause_menu_03" method="_on_coin_collected"]
+

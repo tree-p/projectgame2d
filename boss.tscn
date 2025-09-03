@@ -1,0 +1,307 @@
+[gd_scene load_steps=55 format=3 uid="uid://bg1wm8jfkf3ah"]
+
+[ext_resource type="Texture2D" uid="uid://bsimfhbm37lt1" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_1.png" id="1_bjadb"]
+[ext_resource type="Script" path="res://boss.gd" id="1_gr7pa"]
+[ext_resource type="Texture2D" uid="uid://cxw3turpsbp81" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_2.png" id="2_6bqc8"]
+[ext_resource type="Texture2D" uid="uid://vt8n2ul07te8" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_3.png" id="3_gr7pa"]
+[ext_resource type="Texture2D" uid="uid://cgcls6j7x83hr" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_4.png" id="4_eqge2"]
+[ext_resource type="Texture2D" uid="uid://c8xj5q771f1p5" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_5.png" id="5_un1ew"]
+[ext_resource type="Texture2D" uid="uid://dkm34xad8xvfk" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_6.png" id="6_w6e5o"]
+[ext_resource type="Texture2D" uid="uid://bjghmrgujs3x0" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_7.png" id="7_xhrkw"]
+[ext_resource type="Texture2D" uid="uid://cc8fvb3efsybt" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_8.png" id="8_n14lx"]
+[ext_resource type="Texture2D" uid="uid://bobx582oythwg" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_9.png" id="9_04j31"]
+[ext_resource type="Texture2D" uid="uid://b5305xdo0kosq" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_10.png" id="10_2ulob"]
+[ext_resource type="Texture2D" uid="uid://d4jodrg7f833d" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_11.png" id="11_pvfea"]
+[ext_resource type="Texture2D" uid="uid://da8m7i8he03qd" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_12.png" id="12_6dlkp"]
+[ext_resource type="Texture2D" uid="uid://dhvlg6u1drpr2" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_13.png" id="13_3x3fb"]
+[ext_resource type="Texture2D" uid="uid://dg3y4tqfw67kq" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_14.png" id="14_xcyd7"]
+[ext_resource type="Texture2D" uid="uid://crfohtcidt8l3" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_15.png" id="15_x36vw"]
+[ext_resource type="Texture2D" uid="uid://dq4f8wdoqxu3x" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_1.png" id="16_ein1h"]
+[ext_resource type="Texture2D" uid="uid://dklku61b8jgf0" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_2.png" id="17_rdnqb"]
+[ext_resource type="Texture2D" uid="uid://bbwj1aje2mrrj" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_3.png" id="18_mfce7"]
+[ext_resource type="Texture2D" uid="uid://dv80as1c56xfv" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_4.png" id="19_blebq"]
+[ext_resource type="Texture2D" uid="uid://yj0hf11y3iwf" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_5.png" id="20_wdjsq"]
+[ext_resource type="Texture2D" uid="uid://dy5n6pyplur2m" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_6.png" id="21_d25u6"]
+[ext_resource type="Texture2D" uid="uid://bgjywcodxxkdr" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_7.png" id="22_ywwnh"]
+[ext_resource type="Texture2D" uid="uid://bgm836mmuftvp" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_8.png" id="23_ex6fr"]
+[ext_resource type="Texture2D" uid="uid://6etr4me4on06" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_9.png" id="24_2rput"]
+[ext_resource type="Texture2D" uid="uid://clkee801jdytc" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_10.png" id="25_aqvxe"]
+[ext_resource type="Texture2D" uid="uid://bucocermccixv" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_11.png" id="26_rggdd"]
+[ext_resource type="Texture2D" uid="uid://d2ec2wlqf0xuu" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_12.png" id="27_2a7ej"]
+[ext_resource type="Texture2D" uid="uid://dul48sv7x8ial" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_13.png" id="28_0hk1r"]
+[ext_resource type="Texture2D" uid="uid://gyf5twnwotww" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_14.png" id="29_ad74g"]
+[ext_resource type="Texture2D" uid="uid://bdncijchngj2a" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_15.png" id="30_ibnq2"]
+[ext_resource type="Texture2D" uid="uid://cul6b6c2gy2s1" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_16.png" id="31_c4fhl"]
+[ext_resource type="Texture2D" uid="uid://bxy8jpnuqbv1d" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_17.png" id="32_mdgwp"]
+[ext_resource type="Texture2D" uid="uid://db4y5ms0h37hl" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_18.png" id="33_n0iar"]
+[ext_resource type="Texture2D" uid="uid://d33ufip2ynwbl" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_19.png" id="34_5b6d1"]
+[ext_resource type="Texture2D" uid="uid://d058888bk2g3o" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_20.png" id="35_w2b36"]
+[ext_resource type="Texture2D" uid="uid://codp5b3fgma3t" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_21.png" id="36_sce88"]
+[ext_resource type="Texture2D" uid="uid://ctpcw6i3417sm" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_22.png" id="37_qnjq5"]
+[ext_resource type="Texture2D" uid="uid://dtqymrbp474cq" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/04_demon_take_hit/demon_take_hit_1.png" id="38_gnmyn"]
+[ext_resource type="Texture2D" uid="uid://6hm4s0nnfpkx" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/04_demon_take_hit/demon_take_hit_2.png" id="39_fneye"]
+[ext_resource type="Texture2D" uid="uid://de4yoci42jjjf" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/04_demon_take_hit/demon_take_hit_3.png" id="40_rfmol"]
+[ext_resource type="Texture2D" uid="uid://iyx81v1gpbap" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/04_demon_take_hit/demon_take_hit_4.png" id="41_s3knl"]
+[ext_resource type="Texture2D" uid="uid://dprr12crnwhw" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/04_demon_take_hit/demon_take_hit_5.png" id="42_p4vyx"]
+[ext_resource type="Texture2D" uid="uid://bmwo0226pmcxl" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/01_demon_idle/demon_idle_1.png" id="43_03wqa"]
+[ext_resource type="Texture2D" uid="uid://covi024i0rxm1" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/01_demon_idle/demon_idle_2.png" id="44_st0px"]
+[ext_resource type="Texture2D" uid="uid://gfqs5f3evagv" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/01_demon_idle/demon_idle_3.png" id="45_7o8wj"]
+[ext_resource type="Texture2D" uid="uid://b22p3pjdaji7q" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/01_demon_idle/demon_idle_4.png" id="46_ia7v4"]
+[ext_resource type="Texture2D" uid="uid://b5l3q7wq1xopi" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/01_demon_idle/demon_idle_5.png" id="47_2qfsy"]
+[ext_resource type="Texture2D" uid="uid://b722trjgg6fht" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/01_demon_idle/demon_idle_6.png" id="48_ldygg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h6o4k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bjadb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6bqc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gr7pa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_eqge2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_un1ew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_w6e5o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xhrkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_n14lx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_04j31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2ulob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_pvfea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6dlkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_3x3fb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_xcyd7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_x36vw")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_ein1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_rdnqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_mfce7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_blebq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_wdjsq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_d25u6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ywwnh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ex6fr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_2rput")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_aqvxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_rggdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_2a7ej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_0hk1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ad74g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_ibnq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_c4fhl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_mdgwp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_n0iar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_5b6d1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_w2b36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_sce88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_qnjq5")
+}],
+"loop": true,
+"name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_gnmyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_fneye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_rfmol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_s3knl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_p4vyx")
+}],
+"loop": true,
+"name": &"hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("43_03wqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_st0px")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_7o8wj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_ia7v4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_2qfsy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_ldygg")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_gr7pa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+
+[sub_resource type="Animation" id="Animation_6bqc8"]
+resource_name = "boss_attack_sequence"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"attack", &"idle"]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.9),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"shoot_energy_wave"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eqge2"]
+_data = {
+&"RESET": SubResource("Animation_gr7pa"),
+&"boss_attack_sequence": SubResource("Animation_6bqc8")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7cweu"]
+radius = 111.0
+height = 222.0
+
+[node name="Boss" type="CharacterBody2D" groups=["boss"]]
+collision_layer = 4
+collision_mask = 17
+script = ExtResource("1_gr7pa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_h6o4k")
+animation = &"attack"
+
+[node name="SpawnPoint" type="Marker2D" parent="AnimatedSprite2D"]
+position = Vector2(-42, 40.8)
+scale = Vector2(0.4, 0.4)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimatedSprite2D")
+libraries = {
+&"": SubResource("AnimationLibrary_eqge2")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 90)
+shape = SubResource("CapsuleShape2D_7cweu")
+
+[node name="Timer_Attack" type="Timer" parent="."]
+
+[node name="Timer_Hit" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="Timer_Attack" method="_on_AnimatedSprite2D_animation_finished"]
+[connection signal="timeout" from="Timer_Attack" to="." method="_on_Timer_Attack_timeout"]
+[connection signal="timeout" from="Timer_Hit" to="." method="_on_Timer_Hit_timeout"]

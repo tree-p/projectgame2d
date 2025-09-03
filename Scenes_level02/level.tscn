@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cky6e5nl0nyod" path="res://level/platforms/platform.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://c3dh7xb6ef76q" path="res://level/coin.tscn" id="4"]
 [ext_resource type="Texture2D" uid="uid://bxsmiv7k3fngt" path="res://level/platforms/moving_platform.webp" id="6"]
-[ext_resource type="PackedScene" uid="uid://cw6nldo3rjyyq" path="res://level/background/parallax_background.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://dxfs5bmvo3f71" path="res://level/background/parallax_background.tscn" id="7"]
 [ext_resource type="Texture2D" uid="uid://bj6am5nfc0k73" path="res://level/props/grass_1.webp" id="10"]
 [ext_resource type="Texture2D" uid="uid://ddmq5iwm2qd1j" path="res://level/props/flower_1.webp" id="11"]
 [ext_resource type="Texture2D" uid="uid://bju7r7jqn8bqy" path="res://level/props/grass_2.webp" id="12"]
@@ -39,7 +39,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_knmjc"]
 _data = {
-"move": SubResource("1")
+&"move": SubResource("1")
 }
 
 [sub_resource type="Animation" id="2"]
@@ -60,7 +60,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_frb4n"]
 _data = {
-"move": SubResource("2")
+&"move": SubResource("2")
 }
 
 [node name="Level" type="Node2D"]
@@ -1295,7 +1295,7 @@ position = Vector2(707, 400)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform"]
 callback_mode_process = 0
 libraries = {
-"": SubResource("AnimationLibrary_knmjc")
+&"": SubResource("AnimationLibrary_knmjc")
 }
 autoplay = "move"
 
@@ -1305,7 +1305,7 @@ position = Vector2(-28, 645)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform2"]
 callback_mode_process = 0
 libraries = {
-"": SubResource("AnimationLibrary_frb4n")
+&"": SubResource("AnimationLibrary_frb4n")
 }
 autoplay = "move"
 
