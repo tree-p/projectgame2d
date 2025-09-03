@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://2elur2m0il32"]
 
-[ext_resource type="Script" uid="uid://7tnej4tegaxa" path="res://game_splitscreen.gd" id="1_60qgt"]
-[ext_resource type="PackedScene" uid="uid://drh01msmqbsm1" path="res://Boss_Scene.tscn" id="2_e85pc"]
-[ext_resource type="PackedScene" uid="uid://dggactv0aho4p" path="res://gui/pause_menu_splitscreen.tscn" id="2_xkexm"]
-[ext_resource type="PackedScene" uid="uid://vh7pmputa7r3" path="res://player/player.tscn" id="4_8j0va"]
+[ext_resource type="Script" uid="uid://7tnej4tegaxa" path="res://DEAM_game_splitscreen.gd" id="1_nn4t4"]
+[ext_resource type="PackedScene" uid="uid://drh01msmqbsm1" path="res://Boss_Scene.tscn" id="2_01fb8"]
+[ext_resource type="PackedScene" uid="uid://vh7pmputa7r3" path="res://player/DEAM_player.tscn" id="3_k38ri"]
+[ext_resource type="PackedScene" uid="uid://dggactv0aho4p" path="res://gui/pause_menu_splitscreen.tscn" id="4_w6aaj"]
 
 [sub_resource type="Gradient" id="Gradient_77njx"]
 
@@ -13,7 +13,7 @@ width = 2
 
 [node name="GameSplitscreen" type="Node"]
 process_mode = 3
-script = ExtResource("1_60qgt")
+script = ExtResource("1_nn4t4")
 
 [node name="Black" type="ColorRect" parent="."]
 process_mode = 1
@@ -49,14 +49,14 @@ audio_listener_enable_2d = true
 size = Vector2i(399, 480)
 render_target_update_mode = 4
 
-[node name="Final tile" parent="Black/SplitContainer/ViewportContainer1/Viewport1" instance=ExtResource("2_e85pc")]
+[node name="Final tile" parent="Black/SplitContainer/ViewportContainer1/Viewport1" instance=ExtResource("2_01fb8")]
 
-[node name="Player1" parent="Black/SplitContainer/ViewportContainer1/Viewport1" instance=ExtResource("4_8j0va")]
+[node name="Player1" parent="Black/SplitContainer/ViewportContainer1/Viewport1" instance=ExtResource("3_k38ri")]
 unique_name_in_owner = true
 modulate = Color(1, 1.5, 2.5, 1)
 position = Vector2(90, 546)
 
-[node name="Player2" parent="Black/SplitContainer/ViewportContainer1/Viewport1" instance=ExtResource("4_8j0va")]
+[node name="Player2" parent="Black/SplitContainer/ViewportContainer1/Viewport1" instance=ExtResource("3_k38ri")]
 unique_name_in_owner = true
 modulate = Color(3, 1, 1, 1)
 position = Vector2(120, 546)
@@ -75,10 +75,10 @@ audio_listener_enable_2d = true
 size = Vector2i(399, 480)
 render_target_update_mode = 4
 
-[node name="Final tile" parent="Black/SplitContainer/ViewportContainer2/Viewport2" instance=ExtResource("2_e85pc")]
+[node name="Final tile" parent="Black/SplitContainer/ViewportContainer2/Viewport2" instance=ExtResource("2_01fb8")]
 position = Vector2(401, 0)
 
 [node name="InterfaceLayer" type="CanvasLayer" parent="."]
 layer = 100
 
-[node name="PauseMenu" parent="InterfaceLayer" instance=ExtResource("2_xkexm")]
+[node name="PauseMenu" parent="InterfaceLayer" instance=ExtResource("4_w6aaj")]

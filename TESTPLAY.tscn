@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=3 uid="uid://bcfkry6r05y36"]
 
-[ext_resource type="TileSet" uid="uid://08mkofgbxx70" path="res://level/tileset.tres" id="1_2o07d"]
+[ext_resource type="TileSet" uid="uid://08mkofgbxx70" path="res://level/DREAM_tileset.tres" id="1_2o07d"]
 [ext_resource type="Material" uid="uid://djwm5nol3d801" path="res://level/props/wind_sway.tres" id="2_7cmgm"]
 [ext_resource type="Texture2D" uid="uid://upfcr5xg5fvh" path="res://level/props/grass_3.webp" id="3_xjrit"]
 [ext_resource type="Texture2D" uid="uid://bju7r7jqn8bqy" path="res://level/props/grass_2.webp" id="4_emq83"]
@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bxsmiv7k3fngt" path="res://level/platforms/moving_platform.webp" id="13_ny56i"]
 [ext_resource type="PackedScene" uid="uid://6mtip3ruyn" path="res://enemy/enemy.tscn" id="14_a6h0f"]
 [ext_resource type="PackedScene" uid="uid://xaxcxrwtt6by" path="res://game_level_05.tscn" id="15_qmvkx"]
-[ext_resource type="PackedScene" uid="uid://cw6nldo3rjyyq" path="res://level/background/parallax_background.tscn" id="16_c7x8c"]
+[ext_resource type="PackedScene" uid="uid://dxfs5bmvo3f71" path="res://level/background/parallax_background.tscn" id="16_c7x8c"]
 [ext_resource type="Texture2D" uid="uid://icddaryasunc" path="res://level/props/tree_1.webp" id="17_0xiqr"]
 [ext_resource type="Texture2D" uid="uid://dea1a76o6b0ix" path="res://level/props/tree_2.webp" id="18_1ol4u"]
 [ext_resource type="Texture2D" uid="uid://cqydct6vajobg" path="res://level/props/bush_1.webp" id="19_b0yuo"]

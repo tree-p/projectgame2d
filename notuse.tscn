@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bf3wnwihk7ymg"]
+
+[ext_resource type="Script" uid="uid://beqjrviacmvtt" path="res://game.gd" id="1_u545s"]
+[ext_resource type="PackedScene" uid="uid://vh7pmputa7r3" path="res://player/DEAM_player.tscn" id="2_m4mfk"]
+[ext_resource type="PackedScene" uid="uid://drh01msmqbsm1" path="res://Boss_Scene.tscn" id="3_01yel"]
+[ext_resource type="PackedScene" uid="uid://c7ai4bigaryci" path="res://gui/pause_menu_singleplayer.tscn" id="4_x8prr"]
+
+[node name="Game" type="Node"]
+process_mode = 3
+script = ExtResource("1_u545s")
+
+[node name="Final tile2#Player" parent="." instance=ExtResource("2_m4mfk")]
+position = Vector2(90, 546)
+
+[node name="Final tile" parent="." instance=ExtResource("3_01yel")]
+
+[node name="InterfaceLayer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="PauseMenu" parent="InterfaceLayer" instance=ExtResource("4_x8prr")]
