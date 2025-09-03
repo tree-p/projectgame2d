@@ -1,7 +1,7 @@
 [gd_scene load_steps=55 format=3 uid="uid://cxtewh5r77r8f"]
 
 [ext_resource type="Texture2D" uid="uid://bsimfhbm37lt1" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_1.png" id="1_bjadb"]
-[ext_resource type="Script" uid="uid://bl1s1tad5rrdh" path="res://boss.gd" id="1_gr7pa"]
+[ext_resource type="Script" path="res://boss.gd" id="1_gr7pa"]
 [ext_resource type="Texture2D" uid="uid://cxw3turpsbp81" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_2.png" id="2_6bqc8"]
 [ext_resource type="Texture2D" uid="uid://vt8n2ul07te8" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_3.png" id="3_gr7pa"]
 [ext_resource type="Texture2D" uid="uid://cgcls6j7x83hr" path="res://TILE/Temple Platformer Tileset [16x16][FREE] - RottingPixels/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_4.png" id="4_eqge2"]
