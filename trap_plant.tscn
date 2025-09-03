@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://cibsonw4vpe7i"]
+[gd_scene load_steps=13 format=3 uid="uid://cibsonw4vpe7i"]
 
 [ext_resource type="Texture2D" uid="uid://1cesobteu5fs" path="res://assets_01/Plant.png" id="1_8x4y5"]
+[ext_resource type="Script" uid="uid://c63ujxhapfefv" path="res://trap_plant.gd" id="1_lgu1f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lgu1f"]
 size = Vector2(25, 30)
@@ -86,6 +87,7 @@ _data = {
 }
 
 [node name="trap_plant" type="Node2D" groups=["Traps"]]
+script = ExtResource("1_lgu1f")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." groups=["Traps"]]
 
