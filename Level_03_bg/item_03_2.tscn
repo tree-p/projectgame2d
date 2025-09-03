@@ -1,18 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://chnspcup50bpb"]
+[gd_scene load_steps=9 format=3 uid="uid://dnssdiwft37d8"]
 
-[ext_resource type="Script" uid="uid://bdfn0en8ahxr6" path="res://level/coin.gd" id="1_0eqrp"]
-[ext_resource type="Texture2D" uid="uid://h82gv1dlx2xi" path="res://bg/items_without_shadow/43.png" id="2_1rpnn"]
-[ext_resource type="AudioStream" uid="uid://w4j7xs5uhoer" path="res://player/coin_pickup.wav" id="3_ec2ks"]
-
-[sub_resource type="Environment" id="Environment_0eqrp"]
-background_mode = 3
-glow_enabled = true
-glow_intensity = 1.0
-glow_hdr_threshold = 0.85
-glow_hdr_scale = 0.0
-glow_hdr_luminance_cap = 54.25
-fog_enabled = true
-fog_light_color = Color(0.691958, 0.520728, 0, 1)
+[ext_resource type="Script" uid="uid://bdfn0en8ahxr6" path="res://level/coin.gd" id="1_2xsik"]
+[ext_resource type="Texture2D" uid="uid://d66jvqonfege" path="res://bg/items_without_shadow/25.png" id="2_rncdo"]
+[ext_resource type="AudioStream" uid="uid://w4j7xs5uhoer" path="res://player/coin_pickup.wav" id="3_h2hd7"]
 
 [sub_resource type="Animation" id="Animation_4kkvr"]
 length = 0.001
@@ -105,7 +95,7 @@ tracks/5/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("3_ec2ks")
+"stream": ExtResource("3_h2hd7")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -174,18 +164,14 @@ _data = {
 [sub_resource type="CircleShape2D" id="3"]
 radius = 10.0499
 
-[node name="Item_03" type="Area2D"]
+[node name="Item_03_2" type="Area2D"]
 collision_layer = 0
 monitorable = false
-script = ExtResource("1_0eqrp")
+script = ExtResource("1_2xsik")
 
 [node name="Sprite2D" type="Sprite2D" parent="." groups=["items"]]
-self_modulate = Color(2, 2, 2, 1)
 scale = Vector2(0.1625, 0.180078)
-texture = ExtResource("2_1rpnn")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Sprite2D"]
-environment = SubResource("Environment_0eqrp")
+texture = ExtResource("2_rncdo")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
