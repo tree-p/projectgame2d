@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://7tnej4tegaxa" path="res://DEAM_game_splitscreen.gd" id="1_nn4t4"]
 [ext_resource type="PackedScene" uid="uid://drh01msmqbsm1" path="res://Boss_Scene.tscn" id="2_01fb8"]
-[ext_resource type="PackedScene" uid="uid://vh7pmputa7r3" path="res://player/DEAM_player.tscn" id="3_k38ri"]
+[ext_resource type="PackedScene" uid="uid://vh7pmputa7r3" path="res://player/1_DEAM_player.tscn" id="3_k38ri"]
 [ext_resource type="PackedScene" uid="uid://dggactv0aho4p" path="res://gui/pause_menu_splitscreen.tscn" id="4_w6aaj"]
 
 [sub_resource type="Gradient" id="Gradient_77njx"]
