@@ -1,29 +1,27 @@
-[gd_scene load_steps=13 format=3 uid="uid://df7ddsoclivwe"]
+[gd_scene load_steps=12 format=3 uid="uid://uc4tp0ftgkwj"]
 
-[ext_resource type="Texture2D" uid="uid://coj0d33vyyqx1" path="res://player/bullet.webp" id="1"]
-[ext_resource type="Script" path="res://player/bullet.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://coj0d33vyyqx1" path="res://player/bullet.webp" id="1_v7oki"]
+[ext_resource type="Script" uid="uid://q56n6ks1b21p" path="res://bullet.gd" id="1_v8qja"]
 
-[sub_resource type="CanvasItemMaterial" id="1"]
-
-[sub_resource type="CanvasItemMaterial" id="2"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_v8qja"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="3"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_t4vbm"]
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ltbhv"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2b2rl"]
 blend_mode = 1
 
 [sub_resource type="Gradient" id="Gradient_o13ul"]
 interpolation_mode = 2
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_0sj74"]
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_b7duk"]
 gradient = SubResource("Gradient_o13ul")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.5, 0.01)
 
-[sub_resource type="CircleShape2D" id="4"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_t2bd8"]
 radius = 8.0
 
 [sub_resource type="Animation" id="Animation_v7668"]
@@ -85,45 +83,36 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_iv8gr"]
 _data = {
-"RESET": SubResource("Animation_v7668"),
-"destroy": SubResource("5")
+&"RESET": SubResource("Animation_v7668"),
+&"destroy": SubResource("5")
 }
 
 [node name="Bullet" type="RigidBody2D"]
-z_index = 5
-material = SubResource("1")
-collision_layer = 0
-collision_mask = 26
-mass = 0.0283333
-gravity_scale = 0.1
-continuous_cd = 2
-max_contacts_reported = 1
-contact_monitor = true
-script = ExtResource("2")
+script = ExtResource("1_v8qja")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 self_modulate = Color(1, 1, 1, 0)
-material = SubResource("2")
+material = SubResource("CanvasItemMaterial_v8qja")
 emitting = false
+texture = ExtResource("1_v7oki")
 lifetime = 0.1
 speed_scale = 3.0
-texture = ExtResource("1")
 spread = 0.0
 gravity = Vector2(0, 0)
 color = Color(1, 1, 1, 0.705882)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-material = SubResource("3")
-texture = ExtResource("1")
+material = SubResource("CanvasItemMaterial_t4vbm")
+texture = ExtResource("1_v7oki")
 
 [node name="Glow" type="Sprite2D" parent="Sprite2D"]
 modulate = Color(0.501961, 1, 1, 0.25098)
-material = SubResource("CanvasItemMaterial_ltbhv")
+material = SubResource("CanvasItemMaterial_2b2rl")
 scale = Vector2(0.667, 0.667)
-texture = SubResource("GradientTexture2D_0sj74")
+texture = SubResource("GradientTexture2D_b7duk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("4")
+shape = SubResource("CircleShape2D_t2bd8")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
@@ -131,8 +120,5 @@ autostart = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_iv8gr")
+&"": SubResource("AnimationLibrary_iv8gr")
 }
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="timeout" from="Timer" to="." method="destroy"]
