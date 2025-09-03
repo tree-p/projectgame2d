@@ -4,6 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://b6kc5u7122dbi" path="res://bg/New Piskel.png" id="2_0eqrp"]
 [ext_resource type="AudioStream" uid="uid://w4j7xs5uhoer" path="res://player/coin_pickup.wav" id="3_ec2ks"]
 
+[sub_resource type="Environment" id="Environment_0eqrp"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 1.0
+glow_hdr_threshold = 0.85
+glow_hdr_scale = 0.0
+glow_hdr_luminance_cap = 54.25
+fog_enabled = true
+fog_light_color = Color(0.691958, 0.520728, 0, 1)
+
 [sub_resource type="Animation" id="Animation_4kkvr"]
 length = 0.001
 tracks/0/type = "value"
@@ -192,9 +202,13 @@ monitorable = false
 script = ExtResource("1_0eqrp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." groups=["items"]]
+
 scale = Vector2(0.1625, 0.180078)
 texture = ExtResource("2_0eqrp")
 vframes = 5
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Sprite2D"]
+environment = SubResource("Environment_0eqrp")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
