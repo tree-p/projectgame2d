@@ -54,6 +54,7 @@
 [ext_resource type="Texture2D" uid="uid://cvf156cfiv8wi" path="res://bg/3 Objects/Trees/14.png" id="35_dexrq"]
 [ext_resource type="Texture2D" uid="uid://dspooebrdc3ws" path="res://bg/Stones/3.png" id="36_h1lco"]
 [ext_resource type="Texture2D" uid="uid://cbhomfygqmhch" path="res://bg/5 Objects/Ladders/1.png" id="38_i3xt3"]
+[ext_resource type="Texture2D" uid="uid://dyb52emeof6fa" path="res://bg/5 Objects/Grass/1.png" id="39_1tkdo"]
 [ext_resource type="Texture2D" uid="uid://c2qx04my08foe" path="res://bg/5 Objects/Ladders/4.png" id="39_6q8i8"]
 [ext_resource type="Texture2D" uid="uid://dy3li56etqv2o" path="res://bg/Individual PNG files/Tileset/objects_misc_animated/object_misc_animated_26.png" id="39_76hjj"]
 [ext_resource type="PackedScene" uid="uid://uk4g8i5wh7w1" path="res://Level_03_bg/platform_03.tscn" id="40_i7f07"]
@@ -77,6 +78,7 @@
 [ext_resource type="Texture2D" uid="uid://dnfewvhmxamlw" path="res://bg/5 Objects/Grass/7.png" id="51_gdlgy"]
 [ext_resource type="Texture2D" uid="uid://ca0o73tll2mwc" path="res://bg/5 Objects/Grass/5.png" id="52_qaen7"]
 [ext_resource type="Texture2D" uid="uid://xp0e3iuq6k6j" path="res://bg/Individual PNG files/Tileset/bg_objects/bg_objects_13.png" id="53_l8brn"]
+[ext_resource type="Texture2D" uid="uid://dxo47wq6olfw2" path="res://bg/Individual PNG files/Tileset/bg_objects/bg_objects_11.png" id="54_244jd"]
 [ext_resource type="Texture2D" uid="uid://bfim6b8ih63l8" path="res://bg/Individual PNG files/Tileset/bg_objects/bg_objects_16.png" id="55_5uieg"]
 [ext_resource type="Texture2D" uid="uid://dp36t5vogc2tb" path="res://bg/Individual PNG files/Monster/scorpion-black/scorpion-black-0.png" id="56_sag1c"]
 [ext_resource type="Texture2D" uid="uid://dsaq66r4vtqho" path="res://bg/64/Gates_dark_shadow2.png" id="56_wo84q"]
@@ -96,59 +98,18 @@
 [ext_resource type="Texture2D" uid="uid://bnhmsu3lmf806" path="res://bg/Individual PNG files/Tileset/bg_objects/bg_objects_06.png" id="79_k252k"]
 [ext_resource type="Texture2D" uid="uid://c521jek3n2sut" path="res://bg/64/Gates_dark_shadow1.png" id="84_0atwm"]
 [ext_resource type="Texture2D" uid="uid://d343g1setx8s4" path="res://bg/64/Dark_totem_dark_shadow5.png" id="86_0ll2p"]
-[ext_resource type="Texture2D" uid="uid://bx1u34b0die36" path="res://bg/PNG/Bushes7/Bush7_1.png" id="91_eynya"]
 [ext_resource type="Texture2D" uid="uid://crg0mmf3pprpt" path="res://bg/64/Dinosaur_skeleton__head_dark_shadow.png" id="94_mv8q2"]
 [ext_resource type="Texture2D" uid="uid://b8wfpe2l73ahp" path="res://bg/64/Gates_light_shadow3.png" id="96_rmvvf"]
 [ext_resource type="Texture2D" uid="uid://bof5pgv1l4tew" path="res://bg/PNG/crystals_white-gold/crystal_white-gold1.png" id="97_7do3k"]
+[ext_resource type="Texture2D" uid="uid://dx2p42ht1mrve" path="res://bg/64/Dinosaur_skeleton__light_dark_shadow.png" id="98_ivaxu"]
 [ext_resource type="Texture2D" uid="uid://b7buw5ghxe0xd" path="res://bg/PNG/crystals_lime/crystal_lime5.png" id="99_l5cw3"]
-[ext_resource type="Texture2D" uid="uid://crlgsdtbwwt1d" path="res://bg/items_without_shadow/1.png" id="100_6vcd0"]
 [ext_resource type="Texture2D" uid="uid://cecgy5580i3t5" path="res://bg/64/caveman_statue_light_shadow1.png" id="101_jyqkh"]
-[ext_resource type="Texture2D" uid="uid://cuulu8m60orlg" path="res://bg/items_without_shadow/48.png" id="104_6vcd0"]
 [ext_resource type="PackedScene" uid="uid://kcskxmor3elo" path="res://Level_03_bg/traps_03.tscn" id="105_o0bn5"]
 [ext_resource type="PackedScene" uid="uid://c78qbm1sg3b0h" path="res://level/Door.tscn" id="105_ubtr3"]
 [ext_resource type="PackedScene" uid="uid://ctgumjaytuoch" path="res://Scenes_level02/level.tscn" id="106_eynya"]
 [ext_resource type="PackedScene" uid="uid://djlbnaoerux40" path="res://Level_03_bg/traps_03_1.tscn" id="106_g44w2"]
 [ext_resource type="PackedScene" uid="uid://chnspcup50bpb" path="res://Level_03_bg/item_03.tscn" id="109_6vcd0"]
 
-<<<<<<< Updated upstream
-[sub_resource type="Animation" id="Animation_nns2s"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-34, 493)]
-}
-
-[sub_resource type="Animation" id="2"]
-length = 4.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.03, 4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-28, 645), Vector2(-34, 493), Vector2(-28, 645)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_frb4n"]
-_data = {
-&"RESET": SubResource("Animation_nns2s"),
-&"move": SubResource("2")
-}
-=======
->>>>>>> Stashed changes
 
 [sub_resource type="Animation" id="Animation_vt886"]
 length = 0.001
@@ -186,6 +147,43 @@ tracks/0/keys = {
 _data = {
 &"RESET": SubResource("Animation_vt886"),
 &"move": SubResource("1")
+}
+
+[sub_resource type="Animation" id="Animation_nns2s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-34, 493)]
+}
+
+[sub_resource type="Animation" id="2"]
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.03, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-28, 645), Vector2(-34, 493), Vector2(-28, 645)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_frb4n"]
+_data = {
+&"RESET": SubResource("Animation_nns2s"),
+&"move": SubResource("2")
 }
 
 [node name="Level_03" type="Node2D"]
@@ -299,7 +297,7 @@ scale = Vector2(0.612897, 0.784036)
 texture = ExtResource("15_1yh4u")
 
 [node name="g18" type="Sprite2D" parent="Grass"]
-z_index = -2
+z_index = -1
 material = ExtResource("2_dk1vp")
 position = Vector2(-111, 588)
 scale = Vector2(0.8, 0.8)
@@ -821,35 +819,12 @@ scale = Vector2(2, -3.75)
 texture = ExtResource("48_dxy3w")
 flip_h = true
 
-[node name="v55" type="Sprite2D" parent="Grass"]
-z_index = 1
-material = ExtResource("2_dk1vp")
-position = Vector2(868, 676)
-scale = Vector2(5.78333, 3.67426)
-texture = ExtResource("21_jqlp6")
-
-[node name="v54" type="Sprite2D" parent="Grass"]
-z_index = 1
-material = ExtResource("2_dk1vp")
-position = Vector2(779, 677)
-scale = Vector2(6.86051, 3.54944)
-texture = ExtResource("21_jqlp6")
-
-[node name="v53" type="Sprite2D" parent="Grass"]
-z_index = 1
-material = ExtResource("2_dk1vp")
-position = Vector2(743.613, 671.669)
-rotation = -0.00192417
-scale = Vector2(5.59641, 4.283)
-skew = 0.00430036
-texture = ExtResource("21_jqlp6")
-
 [node name="v52" type="Sprite2D" parent="Grass"]
 z_index = 1
 material = ExtResource("2_dk1vp")
-position = Vector2(918.798, 671.363)
+position = Vector2(4023.79, 3242.58)
 rotation = 3.11695
-scale = Vector2(6.01525, -4.04063)
+scale = Vector2(15.0245, -12.367)
 skew = -0.00341403
 texture = ExtResource("21_jqlp6")
 
@@ -894,13 +869,6 @@ material = ExtResource("2_dk1vp")
 position = Vector2(539, 431)
 scale = Vector2(1.73529, -2.5625)
 texture = ExtResource("14_ov1sl")
-
-[node name="g48" type="Sprite2D" parent="Grass"]
-z_index = -1
-material = ExtResource("2_dk1vp")
-position = Vector2(827, 652)
-scale = Vector2(7.25386, 8.26563)
-texture = ExtResource("21_jqlp6")
 
 [node name="v31" type="Sprite2D" parent="Grass"]
 z_index = 1
@@ -1080,6 +1048,7 @@ scale = Vector2(0.165625, 0.228125)
 texture = ExtResource("60_gdlgy")
 
 [node name="Flower9" type="Sprite2D" parent="Flowers"]
+z_index = -1
 material = ExtResource("2_dk1vp")
 position = Vector2(523.55, 626.3)
 scale = Vector2(0.211719, 0.207813)
@@ -1154,6 +1123,13 @@ z_index = 1
 position = Vector2(524, 632)
 scale = Vector2(-0.816781, 1.16525)
 texture = ExtResource("36_h1lco")
+
+[node name="Flower18" type="Sprite2D" parent="Flowers"]
+visible = false
+z_index = 1
+position = Vector2(654, 395)
+scale = Vector2(-0.8, 0.8)
+texture = ExtResource("10_a7ot4")
 
 [node name="Flower17" type="Sprite2D" parent="Flowers"]
 z_index = 1
@@ -1308,15 +1284,25 @@ skew = 0.307178
 texture = ExtResource("38_i3xt3")
 
 [node name="Sprite2D" type="Sprite2D" parent="Platforms/PlatformStatic"]
-position = Vector2(-37.7107, -29.7304)
-rotation = -1.88496
+position = Vector2(-32.4882, -15.669)
+rotation = -1.72439
 scale = Vector2(1.1243, 3.00106)
 skew = 0.123918
 texture = ExtResource("39_6q8i8")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Platforms/PlatformStatic"]
 position = Vector2(-8.49012, -17.1149)
-polygon = PackedVector2Array(-170.838, 7.9798, -90.8381, -15.201, 8.30353, -35.0863, 21.2128, -8.9453, -68.9679, 9.61411, -159.899, 43.3865)
+polygon = PackedVector2Array(-170.838, 7.9798, -90.8381, -15.201, 14.5706, -18.2126, 25.712, 11.7852, -51.1185, 8.44958, -159.899, 43.3865)
+
+[node name="Platform_03" parent="Platforms" instance=ExtResource("40_i7f07")]
+position = Vector2(881, 23)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform_03"]
+callback_mode_process = 0
+libraries = {
+&"": SubResource("AnimationLibrary_knmjc")
+}
+autoplay = "move"
 
 [node name="Platform_04" parent="Platforms" instance=ExtResource("40_i7f07")]
 position = Vector2(-34, 493)
@@ -1409,12 +1395,26 @@ position = Vector2(1387, -58)
 scale = Vector2(1.22886, 0.77447)
 texture = ExtResource("25_jpf5c")
 
+[node name="T3" type="Sprite2D" parent="Trees"]
+z_index = 1
+material = ExtResource("2_dk1vp")
+position = Vector2(726, 670)
+scale = Vector2(3.74287, 4.30461)
+texture = ExtResource("53_l8brn")
+
 [node name="T5" type="Sprite2D" parent="Trees"]
-z_index = -2
+z_index = 1
 material = ExtResource("2_dk1vp")
 position = Vector2(0.999997, 564)
 scale = Vector2(1.48077, 1.5198)
 texture = ExtResource("22_3t440")
+
+[node name="T11" type="Sprite2D" parent="Trees"]
+z_index = 1
+material = ExtResource("2_dk1vp")
+position = Vector2(780, 667)
+scale = Vector2(4.33983, 4.79986)
+texture = ExtResource("54_244jd")
 
 [node name="Bushes" type="Node" parent="."]
 
@@ -1467,23 +1467,256 @@ position = Vector2(484.875, 367.75)
 scale = Vector2(1.59167, 1.82143)
 texture = ExtResource("10_3dvc7")
 
-[node name="B3" type="Sprite2D" parent="Bushes"]
+[node name="B24" type="Sprite2D" parent="Bushes"]
+visible = false
 z_index = -2
 material = ExtResource("2_dk1vp")
-position = Vector2(348, 303)
+position = Vector2(185, 433)
+texture = ExtResource("18_x31rh")
+
+[node name="B22" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(473, 57)
+texture = ExtResource("18_x31rh")
+
+[node name="B16" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(-75, 628)
+texture = ExtResource("18_x31rh")
+
+[node name="B11" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(-230, -10)
+texture = ExtResource("18_x31rh")
+
+[node name="B14" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(162, 66)
+texture = ExtResource("18_x31rh")
+
+[node name="B12" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(927, -3)
+rotation = -0.462162
+texture = ExtResource("18_x31rh")
+
+[node name="B9" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(637, 379)
+rotation = 0.181514
+texture = ExtResource("18_x31rh")
+offset = Vector2(35.3364, -1.40192)
+
+[node name="B20" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(643, 110)
+rotation = 0.181514
+texture = ExtResource("18_x31rh")
+offset = Vector2(35.3364, -1.40192)
+
+[node name="B10" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(-233, -2)
+rotation = -2.96008
+scale = Vector2(1, -1)
+texture = ExtResource("18_x31rh")
+offset = Vector2(35.3364, -1.40192)
+
+[node name="B31" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(-498.685, -14.4639)
+texture = ExtResource("18_x31rh")
+
+[node name="B32" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(-501.685, -6.46387)
+rotation = -2.96008
+scale = Vector2(1, -1)
+texture = ExtResource("18_x31rh")
+offset = Vector2(35.3364, -1.40192)
+
+[node name="B33" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(1141.31, -16.4639)
+texture = ExtResource("18_x31rh")
+
+[node name="B34" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(1138.31, -8.46387)
+rotation = -2.96008
+scale = Vector2(1, -1)
+texture = ExtResource("18_x31rh")
+offset = Vector2(35.3364, -1.40192)
+
+[node name="B21" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(666, 79)
+rotation = -2.96008
+scale = Vector2(1, -1)
+texture = ExtResource("18_x31rh")
+offset = Vector2(35.3364, -1.40192)
+
+[node name="B27" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(572, 191)
+rotation = -2.96008
+scale = Vector2(1, -1)
+texture = ExtResource("18_x31rh")
+offset = Vector2(35.3364, -1.40192)
+
+[node name="B28" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(63, 140)
+rotation = -2.96008
+scale = Vector2(1, -1)
+texture = ExtResource("18_x31rh")
+offset = Vector2(35.3364, -1.40192)
+
+[node name="B15" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(-74, 645)
+rotation = -2.96008
+scale = Vector2(1, -1)
+texture = ExtResource("18_x31rh")
+offset = Vector2(35.3364, -1.40192)
+
+[node name="B5" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(142, 643)
+texture = ExtResource("18_x31rh")
+
+[node name="B4" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(347.125, 633)
+scale = Vector2(1.29348, 1.59091)
+texture = ExtResource("5_uatug")
+
+[node name="B26" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(105, 451)
+texture = ExtResource("18_x31rh")
+
+[node name="B2" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(533.711, 627.94)
+rotation = -3.14159
+scale = Vector2(1.67051, -2.64733)
+texture = ExtResource("39_1tkdo")
+
+[node name="B8" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(522, 387)
+rotation = 2.70506
+scale = Vector2(1, -1)
+texture = ExtResource("18_x31rh")
+
+[node name="B6" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(803, 622)
+rotation = -3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("18_x31rh")
+
+[node name="B29" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(707, 621)
+rotation = -3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("18_x31rh")
+
+[node name="B30" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(739, 638)
+rotation = -3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("18_x31rh")
+
+[node name="B23" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(669, 629)
+rotation = -3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("18_x31rh")
+
+[node name="B18" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(373, 60)
+rotation = -3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("18_x31rh")
+
+[node name="B3" type="Sprite2D" parent="Bushes"]
+visible = false
+z_index = -2
+material = ExtResource("2_dk1vp")
+position = Vector2(225.408, 625.297)
 rotation = -3.14159
 scale = Vector2(1.78821, -2.14973)
 texture = ExtResource("29_s8jdt")
 
 [node name="B25" type="Sprite2D" parent="Bushes"]
+visible = false
 z_index = -2
 material = ExtResource("2_dk1vp")
 position = Vector2(142, 439)
 rotation = -3.14159
 scale = Vector2(1, -1)
-texture = ExtResource("91_eynya")
+texture = ExtResource("18_x31rh")
 
 [node name="B19" type="Sprite2D" parent="Bushes"]
+visible = false
 z_index = -2
 material = ExtResource("2_dk1vp")
 position = Vector2(261, 57)
@@ -1551,10 +1784,9 @@ texture = ExtResource("97_7do3k")
 
 [node name="R4" type="Sprite2D" parent="Rocks"]
 z_index = -2
-position = Vector2(1101, -18)
-rotation = 0.16057
-scale = Vector2(0.265222, 0.266835)
-texture = ExtResource("100_6vcd0")
+position = Vector2(1101, -8.00003)
+rotation = -1.12748
+texture = ExtResource("98_ivaxu")
 flip_h = true
 
 [node name="R13" type="Sprite2D" parent="Rocks"]
@@ -1579,19 +1811,17 @@ position = Vector2(666, 241)
 scale = Vector2(0.757813, 0.796875)
 texture = ExtResource("101_jyqkh")
 
-[node name="R14" type="Sprite2D" parent="."]
-z_index = -2
-position = Vector2(789, 206)
-rotation = 3.21839
-scale = Vector2(0.341501, 0.411209)
-texture = ExtResource("104_6vcd0")
-flip_h = true
-
 [node name="Door" type="Node" parent="."]
 
 [node name="Door2" parent="Door" instance=ExtResource("105_ubtr3")]
-position = Vector2(-517, -36)
+position = Vector2(-518, -38)
 target_scene = ExtResource("106_eynya")
+
+[node name="Door3" parent="Door" instance=ExtResource("105_ubtr3")]
+position = Vector2(-518, -38)
+target_scene = ExtResource("106_eynya")
+
+[node name="Door2" type="Node" parent="."]
 
 [node name="Items" type="Node" parent="."]
 
@@ -1601,7 +1831,7 @@ position = Vector2(1332, -15)
 [node name="Traps" type="Node" parent="."]
 
 [node name="Traps#traps" parent="Traps" instance=ExtResource("105_o0bn5")]
-position = Vector2(689, 667)
+position = Vector2(684, 668)
 
 [node name="Traps#traps2" parent="Traps" instance=ExtResource("105_o0bn5")]
 position = Vector2(809, 668)

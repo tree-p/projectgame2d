@@ -1,19 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://drh01msmqbsm1"]
 
-<<<<<<< Updated upstream
-[ext_resource type="TileSet" uid="uid://08mkofgbxx70" path="res://level/tileset.tres" id="1_3kwwr"]
-[ext_resource type="Texture2D" uid="uid://bei23qaaopwhy" path="res://ChatGPT Image 3 ก.ย. 2568 18_24_58.png" id="2_cwd8b"]
-[ext_resource type="PackedScene" path="res://energy_wave.tscn" id="2_xkdbt"]
-[ext_resource type="PackedScene" path="res://game_level_05.tscn" id="3_xkdbt"]
-[ext_resource type="PackedScene" path="res://boss.tscn" id="4_cwd8b"]
-=======
 [ext_resource type="Script" uid="uid://cb75q0gwg6ryh" path="res://boss_scene.gd" id="1_7pv7c"]
 [ext_resource type="Texture2D" uid="uid://bei23qaaopwhy" path="res://ChatGPT Image 3 ก.ย. 2568 18_24_58.png" id="2_cwd8b"]
 [ext_resource type="PackedScene" uid="uid://fbo6nek37bbr" path="res://energy_wave.tscn" id="2_xkdbt"]
 [ext_resource type="PackedScene" uid="uid://xaxcxrwtt6by" path="res://game_level_05.tscn" id="3_xkdbt"]
 [ext_resource type="TileSet" uid="uid://brkpq6yop58ut" path="res://tileset111.tres" id="3_yluwi"]
 [ext_resource type="PackedScene" uid="uid://cxtewh5r77r8f" path="res://boss.tscn" id="4_cwd8b"]
->>>>>>> Stashed changes
 
 [node name="Final tile" type="Node2D"]
 process_mode = 1

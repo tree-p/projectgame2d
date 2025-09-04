@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://c78qbm1sg3b0h"]
+[gd_scene load_steps=10 format=3 uid="uid://c78qbm1sg3b0h"]
 
 [ext_resource type="Script" uid="uid://baeokgnd6blpr" path="res://Level_03_bg/Door.gd" id="1_5g6ka"]
-[ext_resource type="Texture2D" uid="uid://nryw61buolpc" path="res://bg/spr_portal_strip8.png" id="2_5g6ka"]
+[ext_resource type="Texture2D" uid="uid://bquwtp6hebvht" path="res://bg/DoorLocked.png" id="1_elkbi"]
+[ext_resource type="Texture2D" uid="uid://d33r8gudcowil" path="res://bg/DoorOpen.png" id="2_1klhi"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Close"
@@ -9,14 +10,26 @@ length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Sprite2:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [1, 2, 3, 4, 5, 6]
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.19),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
 }
 
 [sub_resource type="Animation" id="2"]
@@ -63,6 +76,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.266667, 0.766667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 0]
+}
 
 [sub_resource type="Animation" id="Animation_yyysg"]
 length = 0.001
@@ -73,6 +98,18 @@ tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -94,11 +131,15 @@ size = Vector2(19.5, 70)
 collision_layer = 32
 script = ExtResource("1_5g6ka")
 
+[node name="Sprite2" type="Sprite2D" parent="."]
+position = Vector2(0.499999, -1)
+scale = Vector2(0.175, 0.168103)
+texture = ExtResource("2_1klhi")
+
 [node name="Sprite" type="Sprite2D" parent="."]
-position = Vector2(-1, -12)
-scale = Vector2(0.704353, 0.75)
-texture = ExtResource("2_5g6ka")
-hframes = 8
+position = Vector2(-2.38419e-07, -2.38419e-07)
+scale = Vector2(0.176786, 0.172414)
+texture = ExtResource("1_elkbi")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
