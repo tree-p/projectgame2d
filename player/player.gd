@@ -9,9 +9,15 @@ const ACCELERATION_SPEED = WALK_SPEED * 6.0
 const JUMP_VELOCITY = -725.0
 const TERMINAL_VELOCITY = 700
 
+
+
 @export var action_suffix := ""
 @export var max_health: int = 100
-var current_health: int
+var current_health: int = 100
+func update_health_ui():
+	var ui = get_node("../UI") # ขึ้นจาก Player ไปหา UI
+	ui.get_node("HBoxContainer/HPLabel").text = "HP: %d" % current_health
+	ui.get_node("HBoxContainer/TextureProgressBar").value = current_health
 
 var gravity: int = ProjectSettings.get("physics/2d/default_gravity")
 @onready var platform_detector := $PlatformDetector as RayCast2D
@@ -30,6 +36,7 @@ var state = State.MOVE
 func _ready() -> void:
 	current_health = max_health
 	add_to_group("player") # ✅ ให้ Player อยู่ใน group
+	update_health_ui()
 
 func _physics_process(delta: float) -> void:
 	if is_on_floor():
@@ -92,9 +99,12 @@ func play_walk_in_animation():
 # ----------------------------
 func take_damage(amount: int) -> void:
 	current_health -= amount
-	print("Player HP:", current_health)
+	current_health = max(current_health, 0)
+	update_health_ui()
+
 	if current_health <= 0:
 		die()
+
 
 func heal(amount: int) -> void:
 	current_health = clamp(current_health + amount, 0, max_health)
@@ -103,3 +113,6 @@ func die() -> void:
 	print("Player is Dead!")
 	emit_signal("player_died")
 	call_deferred("queue_free")
+	get_tree().paused = true
+	get_node("../RestartUI").visible = true
+	print("Player is Dead!")
