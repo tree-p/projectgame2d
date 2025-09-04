@@ -250,7 +250,7 @@ colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [node name="Enemy02_1" type="CharacterBody2D"]
 collision_layer = 2
-collision_mask = 24
+collision_mask = 25
 script = ExtResource("1_eqdp8")
 
 [node name="PlatformDetector" type="RayCast2D" parent="."]

@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnki8x8ufkwj"]
+
+[ext_resource type="Script" uid="uid://ctoc2o2u1ibg4" path="res://menu.gd" id="1_ouk20"]
+[ext_resource type="Texture2D" uid="uid://dl246enld613i" path="res://Dungeon background cartoon 2d-8.jpg" id="2_4hy44"]
+[ext_resource type="FontFile" uid="uid://daydupccv8gnw" path="res://ARCADECLASSIC.TTF" id="2_mae5d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ytr4m"]
+font_size = 45
+
+[node name="menu" type="Node2D"]
+script = ExtResource("1_ouk20")
+
+[node name="DungeonBackgroundCartoon2d-8" type="Sprite2D" parent="."]
+position = Vector2(397.5, 234.5)
+scale = Vector2(0.541016, 0.330078)
+texture = ExtResource("2_4hy44")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -438.0
+offset_top = -124.0
+offset_right = 413.0
+offset_bottom = -78.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_mae5d")
+theme_override_font_sizes/font_size = 35
+text = "                                                    Fallen Wings"
+label_settings = SubResource("LabelSettings_ytr4m")
+
+[node name="StartButton" type="Button" parent="."]
+anchors_preset = -1
+offset_left = 356.0
+offset_top = 317.0
+offset_right = 460.0
+offset_bottom = 361.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_mae5d")
+theme_override_font_sizes/font_size = 35
+text = "START"
+
+[node name="ExitButton" type="Button" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 368.0
+offset_top = 390.0
+offset_right = 453.0
+offset_bottom = 434.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_mae5d")
+theme_override_font_sizes/font_size = 35
+text = "EXIT"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

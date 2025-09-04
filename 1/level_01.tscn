@@ -1,0 +1,704 @@
+[gd_scene load_steps=20 format=3 uid="uid://iyqtvwycbbub"]
+
+[ext_resource type="TileSet" uid="uid://41m4oqnqq6lp" path="res://1/tilesetlevel01up.tres" id="1_276ca"]
+[ext_resource type="PackedScene" uid="uid://b0vcki63tv1pf" path="res://level/background/parallax_background_01.tscn" id="2_qdyr6"]
+[ext_resource type="PackedScene" uid="uid://ceefeyeevp24i" path="res://Mob.tscn" id="4_276ca"]
+[ext_resource type="Material" uid="uid://djwm5nol3d801" path="res://level/props/wind_sway.tres" id="6_jyh1l"]
+[ext_resource type="PackedScene" uid="uid://sp28h3d1h1dr" path="res://1/platform_01.tscn" id="6_ufmk5"]
+[ext_resource type="Texture2D" uid="uid://bip5fnwgwhv8m" path="res://bg/3 Objects/Grass/14.png" id="9_347xy"]
+[ext_resource type="PackedScene" uid="uid://328ysqpujgdp" path="res://trap_plant.tscn" id="10_30pnd"]
+[ext_resource type="Texture2D" uid="uid://be71n8apg35f0" path="res://bg/3 Objects/Grass/13.png" id="10_c1twc"]
+[ext_resource type="Texture2D" uid="uid://1u7km47no136" path="res://bg/3 Objects/Grass/8.png" id="11_6ynwt"]
+[ext_resource type="Texture2D" uid="uid://ct2npyg1rjbnx" path="res://bg/3 Objects/Trees/2.png" id="12_30pnd"]
+[ext_resource type="Texture2D" uid="uid://cgra85p8sj8nk" path="res://bg/3 Objects/Trees/4.png" id="13_jq2yv"]
+[ext_resource type="Texture2D" uid="uid://be5xmnqx2pbay" path="res://bg/3 Objects/Trees/1.png" id="14_ydbb5"]
+[ext_resource type="Texture2D" uid="uid://cqlo2hdlvq7aj" path="res://bg/3 Objects/Trees/11.png" id="15_p7irx"]
+[ext_resource type="Texture2D" uid="uid://4f3ah8lf3hos" path="res://bg/3 Objects/Trees/17.png" id="15_tlyi1"]
+[ext_resource type="Texture2D" uid="uid://67pq18un54tw" path="res://bg/3 Objects/Trees/16.png" id="16_jluue"]
+
+[sub_resource type="Animation" id="1"]
+resource_name = "move"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.001, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(707, 400), Vector2(800, 410), Vector2(800, 200), Vector2(800, 410)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_knmjc"]
+_data = {
+&"move": SubResource("1")
+}
+
+[sub_resource type="Animation" id="2"]
+length = 8.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-28, 645), Vector2(-28, 350), Vector2(-28, 645)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_frb4n"]
+_data = {
+&"move": SubResource("2")
+}
+
+[node name="Level_01" type="Node2D"]
+position = Vector2(48, -160)
+
+[node name="TileMap" type="TileMap" parent="."]
+z_index = 1
+tile_set = ExtResource("1_276ca")
+rendering_quadrant_size = 32
+format = 2
+layer_0/tile_data = PackedInt32Array(65524, 524389, 1, 65525, 0, 0, 65526, 0, 0, 65527, 0, 0, 65528, 0, 0, 65529, 0, 0, 65530, 0, 0, 65531, 0, 0, 16, 393317, 3, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 131061, 65637, 0, 131062, 65637, 0, 131063, 131173, 0, 131064, 131173, 0, 131065, 196709, 0, 65538, 262245, 2, 65539, 327781, 2, 65540, 327781, 2, 65541, 393317, 2, 65542, 458853, 2, 196596, 101, 1, 196597, 65637, 1, 196598, 65637, 1, 196599, 65637, 1, 196600, 65637, 1, 196607, 262245, 2, 131072, 458853, 2, 131087, 65637, 1, 131093, 65637, 1, 131094, 196709, 1, 262132, 101, 1, 262133, 101, 3, 262134, 65637, 3, 262135, 65637, 1, 262136, 65637, 1, 262137, 393317, 4, 262138, 65637, 0, 196614, 262245, 2, 196615, 327781, 2, 196616, 458853, 2, 196622, 101, 1, 196623, 65637, 1, 196624, 65637, 1, 196625, 65637, 1, 196626, 65637, 1, 196627, 65637, 1, 196628, 101, 3, 196629, 65637, 3, 196630, 196709, 1, 327668, 101, 1, 327669, 101, 4, 327673, 101, 3, 327674, 65637, 3, 327675, 196709, 1, 262158, 101, 1, 262159, 65637, 1, 262160, 101, 3, 262161, 65637, 3, 262162, 65637, 1, 262163, 65637, 1, 262164, 101, 4, 262165, 65637, 4, 262166, 196709, 1, 393204, 101, 1, 393205, 65637, 1, 393207, 65637, 1, 393208, 65637, 1, 393209, 101, 4, 393210, 65637, 4, 393211, 196709, 1, 327681, 262245, 2, 327682, 327781, 2, 327683, 458853, 2, 327694, 101, 1, 327695, 65637, 1, 327696, 101, 4, 327697, 65637, 4, 327698, 65637, 1, 327699, 65637, 1, 327700, 65637, 1, 327701, 65637, 1, 327702, 196709, 1, 458740, 101, 1, 458741, 101, 3, 458746, 65637, 1, 458747, 196709, 1, 393222, 524389, 4, 393223, 524389, 4, 393224, 524389, 4, 393225, 524389, 4, 393226, 524389, 4, 393230, 101, 1, 393231, 65637, 1, 393232, 65637, 1, 393234, 65637, 1, 393235, 65637, 1, 393236, 101, 3, 393237, 65637, 3, 393238, 196709, 1, 524276, 101, 1, 524277, 101, 4, 524279, 65637, 1, 524280, 65637, 1, 524283, 196709, 1, 458753, 262245, 2, 458754, 327781, 2, 458755, 393317, 2, 458756, 458853, 2, 458758, 262245, 2, 458759, 327781, 2, 458760, 393317, 2, 458761, 393317, 2, 458762, 458853, 2, 458767, 65637, 1, 458768, 101, 3, 458770, 65637, 1, 458772, 101, 4, 458773, 65637, 4, 458774, 196709, 1, 589812, 101, 1, 589813, 65637, 1, 589817, 101, 4, 589819, 196709, 1, 524303, 65637, 1, 524304, 101, 4, 524305, 65637, 4, 524306, 65637, 1, 524308, 65637, 1, 524309, 65637, 1, 524310, 196709, 1, 655348, 101, 1, 655349, 101, 3, 655350, 65637, 3, 655351, 65637, 1, 655355, 393317, 4, 655356, 393317, 3, 589840, 65637, 1, 589841, 65637, 1, 589842, 65637, 1, 589844, 101, 3, 589845, 65637, 3, 589846, 196709, 1, 720884, 101, 1, 720885, 101, 4, 720886, 65637, 4, 720887, 65637, 1, 720888, 65637, 1, 720889, 101, 3, 720890, 65637, 3, 720891, 65637, 1, 720892, 393317, 4, 655374, 327781, 4, 655376, 101, 3, 655377, 65637, 3, 655378, 65637, 1, 655379, 65637, 1, 655380, 101, 4, 655381, 65637, 4, 655382, 196709, 1, 786420, 101, 1, 786421, 65637, 1, 786422, 65637, 1, 786423, 65637, 1, 786424, 65637, 1, 786425, 101, 4, 786426, 65637, 4, 786427, 65637, 1, 720908, 393317, 1, 720909, 327781, 4, 720912, 101, 4, 720913, 65637, 4, 720914, 65637, 1, 720915, 65637, 1, 720916, 65637, 1, 720917, 65637, 1, 720918, 196709, 1, 851956, 101, 1, 851957, 65637, 1, 851958, 65637, 1, 851959, 65637, 1, 851960, 65637, 1, 851961, 65637, 1, 851962, 65637, 1, 851963, 65637, 1, 851964, 65637, 1, 851965, 524389, 4, 851966, 65637, 1, 851967, 65637, 1, 786432, 524389, 4, 786433, 65637, 1, 786434, 65637, 1, 786435, 524389, 4, 786436, 65637, 1, 786437, 65637, 1, 786438, 524389, 4, 786439, 65637, 1, 786440, 65637, 1, 786441, 524389, 4, 786442, 65637, 1, 786443, 65637, 1, 786444, 524389, 4, 786445, 65637, 1, 786446, 65637, 1, 786447, 65637, 1, 786448, 65637, 1, 786449, 65637, 1, 786450, 65637, 1, 786451, 65637, 1, 786452, 65637, 1, 786453, 65637, 1, 786454, 196709, 1, -655372, 524389, 0, -720874, 524389, 0, -131050, 524389, 2, -196586, 524389, 2, -262122, 524389, 2, -327658, 524389, 2, -393194, 524389, 2, -458730, 524389, 2, -524266, 524389, 2, -589802, 524389, 2, -655338, 524389, 2, -589836, 524389, 1, -524300, 524389, 1, -458764, 524389, 1, -393228, 524389, 1, -327692, 524389, 1, -262156, 524389, 1, -196620, 524389, 1, -131084, 524389, 1, -65548, 524389, 1, -12, 524389, 1, 655373, 327781, 3, 720903, 393317, 1, 720904, 393317, 1, 720905, 393317, 1, 720906, 393317, 1, 720907, 393317, 1, 262139, 393317, 3, 327671, 65637, 1, 327672, 65637, 1, 458743, 65637, 1, 524281, 101, 3, 589816, 65637, 1, 655352, 65637, 1, 589814, 65637, 1, 524278, 65637, 4, 458742, 65637, 3, 458744, 65637, 1, 458745, 65637, 1, 524282, 65637, 3, 589818, 65637, 4, 655354, 65637, 1, 655353, 65637, 1, 589815, 65637, 1, 131060, 196709, 3, 917501, 65637, 2, 917502, 65637, 2, 917492, 101, 2, 917494, 65637, 2, 917495, 65637, 2, 917496, 65637, 2, 917497, 65637, 2, 917498, 65637, 2, 917499, 65637, 2, 917500, 65637, 2, 917503, 65637, 2, 851968, 65637, 2, 851969, 65637, 2, 851970, 65637, 2, 851971, 65637, 2, 851972, 131173, 2, 851973, 131173, 2, 851974, 131173, 2, 851975, 131173, 2, 851976, 131173, 2, 851977, 131173, 2, 851978, 131173, 2, 851979, 131173, 2, 851980, 131173, 2, 851981, 131173, 2, 851982, 131173, 2, 851983, 131173, 2, 851984, 131173, 2, 851985, 131173, 2, 851986, 131173, 2, 851987, 131173, 2, 851988, 131173, 2, 851989, 131173, 2, 851990, 196709, 2, 786431, 65637, 0, 720896, 327781, 1, 720897, 327781, 1, 720898, 327781, 1, 720899, 393317, 1, 720900, 393317, 1, 720901, 393317, 1, 720902, 393317, 1, 720893, 65637, 0, 720894, 393317, 3, 786430, 393317, 4, 786429, 65637, 1, 720910, 65637, 1, 720911, 65637, 1, 655375, 65637, 1, 524302, 101, 1, 589838, 101, 1, 458766, 101, 1, 589839, 65637, 1, -65514, 524389, 2, 65557, 131173, 0, 65558, 196709, 3, 22, 524389, 2, 786428, 65637, 1, 917493, 131173, 2, 65556, 131173, 0, 65555, 131173, 0, 131091, 65637, 1, 65554, 327781, 3, 131090, 327781, 4, 65550, 101, 1, 14, 101, 0, 131089, 393317, 1, 131088, 393317, 4, 15, 65637, 0, 65551, 65637, 1, 65552, 196709, 1, 131092, 65637, 1, 393233, 65637, 1, 458769, 65637, 3, 589843, 65637, 1, 524307, 65637, 1, 458771, 65637, 1, 327670, 65637, 4, 393206, 65637, 1, 131086, 101, 1, 327679, 458853, 2, 327676, 262245, 2, 327677, 327781, 2, 327678, 393317, 2, 196604, 262245, 2, 196605, 458853, 2, 196601, 196709, 1, 262156, 458853, 2, 196618, 524389, 3, 262155, 262245, 2, 393229, 524389, 3, 65547, 262245, 2, 65548, 458853, 2)
+
+[node name="ParallaxBackground_01" parent="." instance=ExtResource("2_qdyr6")]
+
+[node name="Platforms" type="Node" parent="."]
+
+[node name="platform01" parent="Platforms" instance=ExtResource("6_ufmk5")]
+position = Vector2(707, 400)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/platform01"]
+callback_mode_process = 0
+libraries = {
+&"": SubResource("AnimationLibrary_knmjc")
+}
+autoplay = "move"
+
+[node name="platform02" parent="Platforms" instance=ExtResource("6_ufmk5")]
+position = Vector2(-28, 645)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/platform02"]
+callback_mode_process = 0
+libraries = {
+&"": SubResource("AnimationLibrary_frb4n")
+}
+autoplay = "move"
+
+[node name="Enemies01" type="Node" parent="."]
+
+[node name="Enemy_05" parent="Enemies01" instance=ExtResource("4_276ca")]
+z_index = 1
+position = Vector2(-131, 79)
+collision_mask = 17
+
+[node name="Enemy_01" parent="Enemies01" instance=ExtResource("4_276ca")]
+z_index = 1
+position = Vector2(9, -53)
+collision_mask = 17
+
+[node name="Enemy_02" parent="Enemies01" instance=ExtResource("4_276ca")]
+position = Vector2(327, -123)
+collision_mask = 17
+
+[node name="Enemy_03" parent="Enemies01" instance=ExtResource("4_276ca")]
+position = Vector2(517, 13)
+collision_mask = 17
+
+[node name="Enemy_04" parent="Enemies01" instance=ExtResource("4_276ca")]
+z_index = 1
+position = Vector2(277, 143)
+collision_mask = 17
+
+[node name="Traps01" type="Node" parent="."]
+
+[node name="trap_plant" parent="Traps01" instance=ExtResource("10_30pnd")]
+z_index = 1
+position = Vector2(449, 17)
+
+[node name="trap_plant2" parent="Traps01" instance=ExtResource("10_30pnd")]
+z_index = 1
+position = Vector2(1171, -47)
+
+[node name="trap_plant3" parent="Traps01" instance=ExtResource("10_30pnd")]
+z_index = 1
+position = Vector2(55, -53)
+
+[node name="trap_plant4" parent="Traps01" instance=ExtResource("10_30pnd")]
+z_index = 1
+position = Vector2(170, 274)
+
+[node name="trap_plant5" parent="Traps01" instance=ExtResource("10_30pnd")]
+z_index = 1
+position = Vector2(515, 518)
+
+[node name="trap_plant6" parent="Traps01" instance=ExtResource("10_30pnd")]
+z_index = 1
+position = Vector2(532, 208)
+
+[node name="Bushes01" type="Node" parent="."]
+
+[node name="bush1" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(19, -50)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush2" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(73, -44)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("10_c1twc")
+
+[node name="bush3" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(41, 532)
+scale = Vector2(4.64431, 4.64431)
+texture = ExtResource("9_347xy")
+
+[node name="bush4" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(105, 534)
+scale = Vector2(4.14346, 4.14346)
+texture = ExtResource("9_347xy")
+
+[node name="bush5" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(194, 530)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush6" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(250, 533)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush7" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(310, 528)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush8" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(362, 534)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush9" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(420, 526)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush10" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(488, 533)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush11" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(545, 526)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush12" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(601, 528)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush13" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(659, 535)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush14" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(713, 530)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush15" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(754, 527)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush16" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(808, 527)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush17" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(875, 537)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush18" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(715, 218)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush19" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(658, 208)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush20" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(594, 215)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush21" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(527, 211)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush22" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(471, 219)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush23" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(321, 277)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush24" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(256, 288)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush25" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(206, 269)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush26" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(153, 288)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush27" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(153, 146)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush28" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(182, 155)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush29" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(221, 153)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush30" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(584, 29)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush31" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(539, 20)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush32" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(488, 27)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush33" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(473, 39)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush34" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(221, -108)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush35" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(282, -97)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush36" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(323, -97)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush37" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(372, -116)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush38" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(434, -97)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush39" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(459, -97)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush40" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(-123, 460)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush41" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(-303, 20)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush42" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(-308, 29)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush43" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(-150, -47)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush44" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(793, 85)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush45" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(-162, 84)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush46" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(-111, 89)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush47" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(-58, 88)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush48" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(1171, -47)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush49" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(790, -109)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bush50" type="Sprite2D" parent="Bushes01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(836, -97)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("9_347xy")
+
+[node name="bushgreen01" type="Node" parent="."]
+
+[node name="bushgr1" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(73, 545)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr2" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(155, 545)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr3" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(233, 545)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr4" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(321, 535)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr5" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(401, 545)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr6" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(488, 537)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr7" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(566, 545)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr8" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(657, 552)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr9" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(731, 545)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr10" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(821, 545)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr11" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(-12, 549)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr12" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(270, 278)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr13" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(192, 296)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr14" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(-123, 482)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr15" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(555, 227)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr16" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(635, 219)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr17" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(697, 230)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr18" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(245, 165)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr19" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(167, 165)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr20" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(41, -25)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr21" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(260, -89)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr22" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(381, -97)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr23" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(510, 39)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr24" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(566, 39)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr25" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(-347, 27)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr26" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(-127, -31)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr27" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(-111, 103)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr28" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(-10, 81)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr29" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(-162, 103)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr30" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(821, 103)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr31" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(1210, -33)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="bushgr32" type="Sprite2D" parent="bushgreen01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(808, -94)
+scale = Vector2(3.40909, 3.40909)
+texture = ExtResource("11_6ynwt")
+
+[node name="Trees01" type="Node" parent="."]
+
+[node name="tree1" type="Sprite2D" parent="Trees01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(249, 117)
+texture = ExtResource("12_30pnd")
+
+[node name="tree2" type="Sprite2D" parent="Trees01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(345, 244)
+texture = ExtResource("13_jq2yv")
+
+[node name="tree3" type="Sprite2D" parent="Trees01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(588, -17)
+texture = ExtResource("12_30pnd")
+
+[node name="tree4" type="Sprite2D" parent="Trees01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(473, 185)
+texture = ExtResource("14_ydbb5")
+
+[node name="tree5" type="Sprite2D" parent="Trees01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(92, -66)
+scale = Vector2(1.29605, 1.29605)
+texture = ExtResource("15_tlyi1")
+
+[node name="tree6" type="Sprite2D" parent="Trees01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(500, 180)
+scale = Vector2(1.79229, 1.79229)
+texture = ExtResource("16_jluue")
+
+[node name="tree7" type="Sprite2D" parent="Trees01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(243, -116)
+scale = Vector2(1.79229, 1.79229)
+texture = ExtResource("16_jluue")
+
+[node name="tree8" type="Sprite2D" parent="Trees01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(-103, -47)
+scale = Vector2(1.79229, 1.79229)
+texture = ExtResource("16_jluue")
+
+[node name="tree9" type="Sprite2D" parent="Trees01"]
+material = ExtResource("6_jyh1l")
+position = Vector2(459, -127)
+scale = Vector2(0.626914, 0.626914)
+texture = ExtResource("15_p7irx")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+rotation = -1.0472
+scale = Vector2(5, 5)
+color = Color(0.535979, 0.131293, 0.0943471, 1)
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 12.0
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.558271, 0.345463, 0.342456, 1)

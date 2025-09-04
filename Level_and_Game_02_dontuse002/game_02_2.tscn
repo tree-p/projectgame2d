@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://wr8ha8ncur25"]
+
+[ext_resource type="Script" uid="uid://beqjrviacmvtt" path="res://game.gd" id="1_pyfpw"]
+[ext_resource type="PackedScene" uid="uid://c7ytialawl8eu" path="res://2/level_02_2.tscn" id="2_ulvni"]
+[ext_resource type="PackedScene" uid="uid://ju4pe4m1w51k" path="res://PLY/player.tscn" id="3_b50rl"]
+[ext_resource type="PackedScene" uid="uid://c7ai4bigaryci" path="res://gui/pause_menu_singleplayer.tscn" id="4_rg8vk"]
+[ext_resource type="PackedScene" uid="uid://bkstg81vj8gp6" path="res://level/DREAMdoor.tscn" id="5_ss8es"]
+[ext_resource type="Script" uid="uid://ce75wbonuoj1r" path="res://2-3_mdoor.gd" id="6_b50rl"]
+
+[node name="Game_02" type="Node"]
+process_mode = 3
+script = ExtResource("1_pyfpw")
+
+[node name="Level_02" parent="." instance=ExtResource("2_ulvni")]
+
+[node name="Player" parent="." instance=ExtResource("3_b50rl")]
+position = Vector2(157, 611)
+
+[node name="InterfaceLayer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="PauseMenu" parent="InterfaceLayer" groups=["player"] instance=ExtResource("4_rg8vk")]
+
+[node name="Door" parent="." instance=ExtResource("5_ss8es")]
+position = Vector2(1121, 194)
+script = ExtResource("6_b50rl")
+next_scene_path = "res://game_03_03.tscn"
+
+[connection signal="coin_collected" from="Player" to="InterfaceLayer/PauseMenu" method="_on_coin_collected"]

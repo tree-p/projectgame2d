@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://c5hkokyyklymd"]
+
+[ext_resource type="Script" uid="uid://beqjrviacmvtt" path="res://game.gd" id="1_7ime6"]
+[ext_resource type="PackedScene" uid="uid://drh01msmqbsm1" path="res://Boss_Scene.tscn" id="2_7ime6"]
+[ext_resource type="PackedScene" uid="uid://ju4pe4m1w51k" path="res://PLY/player.tscn" id="2_hs3q3"]
+[ext_resource type="PackedScene" uid="uid://c7ai4bigaryci" path="res://gui/pause_menu_singleplayer.tscn" id="4_h4byx"]
+[ext_resource type="PackedScene" uid="uid://jbj6bscacit4" path="res://canvas_layer.tscn" id="4_hs3q3"]
+[ext_resource type="FontFile" uid="uid://daydupccv8gnw" path="res://ARCADECLASSIC.TTF" id="5_h4byx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xg68v"]
+font = ExtResource("5_h4byx")
+font_size = 60
+
+[node name="Game_05_05" type="Node"]
+process_mode = 3
+script = ExtResource("1_7ime6")
+
+[node name="Player_03" parent="." instance=ExtResource("2_hs3q3")]
+position = Vector2(-604, 611)
+
+[node name="Final tile" parent="." instance=ExtResource("2_7ime6")]
+
+[node name="CanvasLayer" parent="." instance=ExtResource("4_hs3q3")]
+
+[node name="Label_Complete2" type="Label" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_xg68v")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InterfaceLayer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="PauseMenu" parent="InterfaceLayer" instance=ExtResource("4_h4byx")]
+
+[connection signal="coin_collected" from="Player_03" to="InterfaceLayer/PauseMenu" method="_on_coin_collected"]

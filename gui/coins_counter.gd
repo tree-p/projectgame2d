@@ -13,4 +13,4 @@ func _ready() -> void:
 
 func collect_coin() -> void:
 	_coins_collected += 1
-	_coins_label.set_text(str(_coins_collected))
+	_coins_label.text = str(_coins_collected)

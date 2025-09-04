@@ -6,5 +6,7 @@ class_name Coin extends Area2D
 
 
 func _on_body_entered(body: Node2D) -> void:
-	animation_player.play(&"picked")
-	(body as Player).coin_collected.emit()
+	if body is Player:
+		body.emit_signal("coin_collected")  # แจ้ง Player ว่าเก็บเหรียญแล้ว
+		animation_player.play("picked")
+		queue_free()  # ลบเหรียญหลังเก็บแล้ว

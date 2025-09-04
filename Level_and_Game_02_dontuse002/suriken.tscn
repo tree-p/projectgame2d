@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://mifgk7wj30xg"]
+[gd_scene load_steps=12 format=3 uid="uid://mifgk7wj30xg"]
 
 [ext_resource type="Script" uid="uid://bk1uo6litkqie" path="res://Level_and_Game_02_dontuse002/static_body_2d.gd" id="1_a7br7"]
+[ext_resource type="Script" uid="uid://bpsmlgay4lab1" path="res://Level_03_bg/traps_03.gd" id="1_l3ka7"]
 [ext_resource type="Texture2D" uid="uid://byaftiynf4o37" path="res://Level_and_Game_02_dontuse002/trap/red01.png" id="1_y5y1m"]
 [ext_resource type="Texture2D" uid="uid://bc07hr5iwvnbs" path="res://Level_and_Game_02_dontuse002/trap/red02.png" id="2_a7br7"]
 [ext_resource type="Texture2D" uid="uid://5rwlchcp18yu" path="res://Level_and_Game_02_dontuse002/trap/red03.png" id="3_l3ka7"]
@@ -62,7 +63,11 @@ _data = {
 &"RESET": SubResource("Animation_q0qrq")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_t4as5"]
+radius = 10.0499
+
 [node name="Red_suriken" type="Node2D"]
+script = ExtResource("1_l3ka7")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." groups=["Traps"]]
 script = ExtResource("1_a7br7")
@@ -80,3 +85,10 @@ animation = &"Red_suriken"
 libraries = {
 &"": SubResource("AnimationLibrary_plwjk")
 }
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D"]
+shape = SubResource("CircleShape2D_t4as5")
+
+[connection signal="body_entered" from="StaticBody2D/Area2D" to="." method="_on_area_2d_body_entered"]

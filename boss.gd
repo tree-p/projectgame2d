@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal boss_died
+
 @export var max_health: int = 200
 @export var attack_damage: int = 25
 @export var attack_interval: float = 1
@@ -99,8 +101,10 @@ func die():
 	if is_dead:
 		return
 	is_dead = true
+	boss_died.emit()
 
 	print("Boss is Dead!")
+	
 
 	if $AnimatedSprite2D.sprite_frames.has_animation("die"):
 		$AnimatedSprite2D.play("die")

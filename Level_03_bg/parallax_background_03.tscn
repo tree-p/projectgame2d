@@ -105,11 +105,12 @@
 [ext_resource type="Texture2D" uid="uid://cecgy5580i3t5" path="res://bg/64/caveman_statue_light_shadow1.png" id="101_jyqkh"]
 [ext_resource type="Texture2D" uid="uid://cuulu8m60orlg" path="res://bg/items_without_shadow/48.png" id="104_6vcd0"]
 [ext_resource type="PackedScene" uid="uid://kcskxmor3elo" path="res://Level_03_bg/traps_03.tscn" id="105_o0bn5"]
-[ext_resource type="PackedScene" uid="uid://c78qbm1sg3b0h" path="res://Level_03_bg/Door.tscn" id="105_ubtr3"]
+[ext_resource type="PackedScene" uid="uid://c78qbm1sg3b0h" path="res://level/Door.tscn" id="105_ubtr3"]
 [ext_resource type="PackedScene" uid="uid://ctgumjaytuoch" path="res://Scenes_level02/level.tscn" id="106_eynya"]
 [ext_resource type="PackedScene" uid="uid://djlbnaoerux40" path="res://Level_03_bg/traps_03_1.tscn" id="106_g44w2"]
 [ext_resource type="PackedScene" uid="uid://chnspcup50bpb" path="res://Level_03_bg/item_03.tscn" id="109_6vcd0"]
 
+<<<<<<< Updated upstream
 [sub_resource type="Animation" id="Animation_nns2s"]
 length = 0.001
 tracks/0/type = "value"
@@ -146,6 +147,8 @@ _data = {
 &"RESET": SubResource("Animation_nns2s"),
 &"move": SubResource("2")
 }
+=======
+>>>>>>> Stashed changes
 
 [sub_resource type="Animation" id="Animation_vt886"]
 length = 0.001

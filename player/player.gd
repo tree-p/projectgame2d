@@ -26,6 +26,7 @@ var _double_jump_charged := false
 enum State { STOP, MOVE }
 var state = State.MOVE
 
+
 func _ready() -> void:
 	current_health = max_health
 	add_to_group("player") # ✅ ให้ Player อยู่ใน group

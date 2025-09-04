@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://cdcsoh5yo5yhw"]
+
+[ext_resource type="Script" uid="uid://beqjrviacmvtt" path="res://game.gd" id="1_8sens"]
+[ext_resource type="PackedScene" uid="uid://iyqtvwycbbub" path="res://1/level_01.tscn" id="2_635xi"]
+[ext_resource type="PackedScene" uid="uid://bkstg81vj8gp6" path="res://level/DREAMdoor.tscn" id="2_llybn"]
+[ext_resource type="PackedScene" uid="uid://c7ai4bigaryci" path="res://gui/pause_menu_singleplayer.tscn" id="4_cuiki"]
+[ext_resource type="PackedScene" path="res://1/effectpar_01.tscn" id="4_y6cnw"]
+[ext_resource type="PackedScene" uid="uid://ju4pe4m1w51k" path="res://PLY/player.tscn" id="6_llybn"]
+
+[node name="Game_level_01" type="Node"]
+process_mode = 3
+script = ExtResource("1_8sens")
+
+[node name="Player" parent="." instance=ExtResource("6_llybn")]
+position = Vector2(-115, 448)
+
+[node name="Door" parent="." instance=ExtResource("2_llybn")]
+position = Vector2(-151, -81)
+
+[node name="Level_01" parent="." instance=ExtResource("2_635xi")]
+
+[node name="effectpar_01" parent="." instance=ExtResource("4_y6cnw")]
+position = Vector2(-3, 0)
+
+[node name="InterfaceLayer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="PauseMenu" parent="InterfaceLayer" instance=ExtResource("4_cuiki")]
+metadata/_edit_use_anchors_ = true
+
+[connection signal="coin_collected" from="Player" to="InterfaceLayer/PauseMenu" method="_on_coin_collected"]
